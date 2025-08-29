@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupak Kadel - Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Rupak Kadel</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showPage('home')" class="nav-link active">Home</a></li>
+                <li><a href="#" onclick="showPage('about')" class="nav-link">About</a></li>
+                <li><a href="#" onclick="showPage('experience')" class="nav-link">Experience</a></li>
+                <li><a href="#" onclick="showPage('projects')" class="nav-link">Projects</a></li>
+                <li><a href="#" onclick="showPage('research')" class="nav-link">Research</a></li>
+                <li><a href="#" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Rupak Kadel</h1>
+                <p class="subtitle">PhD Researcher & Software Engineer</p>
+                <p class="description">
+                    Passionate about creating innovative solutions at the intersection of artificial intelligence,
+                    web development, and human-computer interaction.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" onclick="showPage('projects')" class="btn btn-primary">View My Work</a>
+                    <a href="#" onclick="showPage('contact')" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="section" style="padding-top: 120px;">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8; margin-bottom: 4rem;">
+                    <p>I'm a passionate researcher and developer currently pursuing my PhD in Computer Science with a focus on 
+                    Machine Learning and Human-Computer Interaction. With over 4 years of experience in software development 
+                    and research, I love tackling complex problems and creating innovative solutions.</p>
+                </div>
+
+                <h3 class="section-title">Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>PhD in Computer Science</h3>
+                            <h4>Texas Tech University</h4>
+                            <p class="meta">In Progress</p>
+                            <p class="meta">GPA: 3.892/4.0</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>MS in Software Engineering</h3>
+                            <h4>Texas Tech University</h4>
+                            <p class="meta">December 2021</p>
+                            <p class="meta">GPA: 3.892/4.0</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>BS in Computer Science</h3>
+                            <h4>Texas Tech University</h4>
+                            <p class="meta">December 2021</p>
+                            <p class="meta">GPA: 3.882/4.0</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>AS in Computer Science</h3>
+                            <h4>LaGuardia Community College</h4>
+                            <p class="meta">December 2018</p>
+                            <p class="meta">GPA: 3.857/4.0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages & Databases</h4>
+                        <div class="skill-list">
+                            <span class="skill-item">Java</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">C++</span>
+                            <span class="skill-item">Go</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">R</span>
+                            <span class="skill-item">Shell/Bash</span>
+                        </div>
+                    </div>
+                
+                    <div class="skill-category">
+                        <h4>Web Technologies</h4>
+                        <div class="skill-list">
+                            <span class="skill-item">React</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">Vue.js</span>
+                            <span class="skill-item">Express</span>
+                            <span class="skill-item">Spring Boot</span>
+                            <span class="skill-item">REST APIs</span>
+                            <span class="skill-item">gRPC</span>
+                        </div>
+                    </div>
+                
+                    <div class="skill-category">
+                        <h4>Machine Learning</h4>
+                        <div class="skill-list">
+                            <span class="skill-item">TensorFlow</span>
+                            <span class="skill-item">PyTorch</span>
+                            <span class="skill-item">Scikit-learn</span>
+                            <span class="skill-item">Pandas</span>
+                            <span class="skill-item">NumPy</span>
+                            <span class="skill-item">Keras</span>
+                            <span class="skill-item">Spark MLlib</span>
+                            <span class="skill-item">Graph Neural Networks</span>
+                            <span class="skill-item">Matplotlib</span>
+                        </div>
+                    </div>
+                
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <div class="skill-list">
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">Kubernetes</span>
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">CI/CD (Jenkins, GitHub Actions)</span>
+                            <span class="skill-item">Terraform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Experience Page -->
+    <div id="experience" class="page">
+        <section class="section" style="padding-top: 120px;">
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="cards-grid">
+                    <div class="card" onclick="showDetail('experience', 'salesforce')">
+                        <h3>Software Engineer</h3>
+                        <p class="meta">Salesforce • Jan, 2022 - Jan, 2025</p>
+                        <p>Engineered scalable microservices for Salesforce Data Cloud, cutting infrastructure costs by 30%+ and boosting Spark job efficiency.</p>
+                        <div class="tags">
+                            <span class="tag">Java, Go & SQL</span>
+                            <span class="tag">gRPC & Jenkins</span>
+                            <span class="tag">Docker & Kubernetes</span>
+                            <span class="tag">AWS & Terraform</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('experience', 'ttu')">
+                        <h3>IT Student Assistant</h3>
+                        <p class="meta">IT Help Central, Texas Tech University • Oct, 2019 - Dec, 2021</p>
+                        <p>Delivered rapid IT support and knowledge solutions, improving customer satisfaction and efficiency by 20%.</p>
+                        <div class="tags">
+                            <span class="tag">Technical Support</span>
+                            <span class="tag">Troubleshooting</span>
+                            <span class="tag">Knowledge Base Management</span>
+                            <span class="tag">Customer Service</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('experience', 'paycom')">
+                        <h3>Software Developer Intern</h3>
+                        <p class="meta">Paycom • May, 2021 - Aug, 2021</p>
+                        <p>Built a social media platform and reusable React components, increasing app engagement by 50% and reducing dev time by 30%.</p>
+                        <div class="tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Redux</span>
+                            <span class="tag">Socket.io</span>
+                            <span class="tag">Postman</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('experience', 'ilsnyc2')">
+                        <h3>Information Technology Intern</h3>
+                        <p class="meta">Innovative Lab Solutions • Jun, 2019 - Aug, 2019</p>
+                        <p>Optimized application performance and automated CI/CD pipelines, accelerating software releases.</p>
+                        <div class="tags">
+                            <span class="tag">Performance Optimization</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">JUnit Testing</span>
+                            <span class="tag">Data Entry</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('experience', 'ilsnyc1')">
+                        <h3>Administrative Assistant</h3>
+                        <p class="meta">Innovative Lab Solutions • Feb, 2018 - Aug, 2018</p>
+                        <p>Supported office operations with advanced MS Office skills, streamlining workflows and ensuring precise document management.</p>
+                        <div class="tags">
+                            <span class="tag">Microsoft Office Suite</span>
+                            <span class="tag">Data Entry</span>
+                            <span class="tag">Administrative Support</span>
+                            <span class="tag">Attention to Detail</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('experience', 'nycha')">
+                        <h3>Student Customer Service Representative</h3>
+                        <p class="meta">New York City Housing Authority (RF CUNY) • Jun, 2017 - Dec, 2017</p>
+                        <p>Delivered high-volume customer service at NYC Housing Authority, handling 18+ calls per hour and coordinating timely emergency responses.</p>
+                        <div class="tags">
+                            <span class="tag">Customer Service</span>
+                            <span class="tag">Call Center Operations</span>
+                            <span class="tag">Communication</span>
+                            <span class="tag">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Projects Page -->
+    <div id="projects" class="page">
+        <section class="section" style="padding-top: 120px;">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="cards-grid">
+                    <div class="card" onclick="showDetail('project', 'agent')">
+                        <h3>Self-Learning Conversational Agent</h3>
+                        <p class="meta">Reinforcement Learning • 2021</p>
+                        <p>Built a reinforcement learning–powered chatbot in RASA, reaching 80%+ accuracy with Deep Q-Networks and experience replay.</p>
+                        <div class="tags">
+                            <span class="tag">RASA</span>
+                            <span class="tag">Natural Language Processing (NLP)</span>
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Deep Q-Networks (DQN)</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('project', 'resq')">
+                        <h3>ResQ</h3>
+                        <p class="meta">Mobile Application • 2020</p>
+                        <p>Developed a cross-platform, location-based app to connect disaster victims with nearby responders.</p>
+                        <div class="tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">React Navigation</span>
+                            <span class="tag">Google Cloud Platform (GCP)</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('project', 'foodweb')">
+                        <h3>Foodweb</h3>
+                        <p class="meta">Web Application • 2019</p>
+                        <p>Developed a restaurant discovery web app using MVC pattern and multiple APIs, delivering real-time restaurant and weather insights.</p>
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MVC Architecture</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('project', 'stock')">
+                        <h3>Extended Level Boomers</h3>
+                        <p class="meta">Algorithmic Trading • 2018</p>
+                        <p>Designed a stock and ETF trading algorithm in Java and SQL, achieving a 90% win rate across short- and long-term positions.</p>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Financial Modeling</span>
+                            <span class="tag">Data Structures and Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Research Page -->
+    <div id="research" class="page">
+        <section class="section" style="padding-top: 120px;">
+            <div class="container">
+                <h2 class="section-title">Research & Publications</h2>
+                <div class="cards-grid">
+                    <div class="card" onclick="showDetail('paper', 'solar-panel')">
+                        <h3>Efficient geometry of flexible solar panels optimized for the latitude of New York City</h3>
+                        <p class="meta">LaGuardia Community College • 2018</p>
+                        <p>Researched and optimized flexible solar panel geometry for NYC latitude, and presented findings at conferences to engage diverse audiences.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Mathematica</span>
+                            <span class="tag">MATLAB</span>
+                            <span class="tag">Flux</span>
+                        </div>
+                    </div>
+                    <div class="card" onclick="showDetail('paper', 'earth-pressure')">
+                        <h3>Accurate calculation of the Earth Pressure using numerical integration</h3>
+                        <p class="meta">LaGuardia Community College • 2017</p>
+                        <p>Modeled Earth’s internal pressure and rotational inertia using Python and numerical integration, applying realistic density profiles to improve scientific accuracy.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Numerical Integration</span>
+                            <span class="tag">Scientific Computing</span>
+                            <span class="tag">LaTeX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="section" style="padding-top: 120px;">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
+                    <p style="font-size: 1.1rem; color: var(--text-light);">
+                        I'm always interested in discussing new opportunities, research collaborations, 
+                        or just having a conversation about technology and innovation.
+                    </p>
+                </div>
+                
+                <div class="social-links-container">
+                    <div class="social-links">
+                        <a href="mailto:rkadelofficial@gmail.com" class="social-link email-link">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div class="social-info">
+                                <h4>Email</h4>
+                                <p>Copy My Email</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/rk96official" target="_blank" class="social-link github-link">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div class="social-info">
+                                <h4>GitHub</h4>
+                                <p>View My GitHub Profile</p>
+                            </div>
+                        </a>
+
+                        <a href="https://linkedin.com/in/rk96official" target="_blank" class="social-link linkedin-link">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div class="social-info">
+                                <h4>LinkedIn</h4>
+                                <p>View My LinkedIn Profile</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.researchgate.net/profile/Rupak-Kadel" target="_blank" class="social-link researchgate-link">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div class="social-info">
+                                <h4>ResearchGate</h4>
+                                <p>View My ResearchGate Profile</p>
+                            </div>
+                        </a>
+
+                        <a href="https://scholar.google.com/citations?user=Psl7B20AAAAJ" target="_blank" class="social-link scholar-link">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                                </svg>
+                            </div>
+                            <div class="social-info">
+                                <h4>Google Scholar</h4>
+                                <p>View My Google Scholar Profile</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Detail Pages Container -->
+    <div id="detailPages" style="display: none;">
+        <!-- Experience Details -->
+        <div id="experience-salesforce" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
+                    <h1>Software Engineer at Salesforce</h1>
+                    <p>Scalable microservices for Salesforce Data Cloud • Jan, 2022 - Jan, 2025</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Role Overview</h3>
+                        <p>As an MTS/AMTS Software Engineer at Salesforce, I engineered scalable microservices within Salesforce Genie for Data Cloud, focusing on infrastructure provisioning, management, and optimization for Spark workloads in Amazon EMR and Kubernetes environments.</p>
+
+                        <h3>Key Responsibilities</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Designed pivotal microservices for provisioning and managing Amazon EMR and Kubernetes infrastructure</li>
+                            <li>Implemented Redis Lua-based adaptive throttling with token-based rate limiting for Spark workloads</li>
+                            <li>Led migration of EKS Clusters to Launch Templates for enhanced flexibility and integration</li>
+                            <li>Launched Karpenter in EKS Clusters with weekly node patching for improved reliability</li>
+                            <li>Provided on-call support to hundreds of customers, resolving critical issues swiftly</li>
+                        </ul>
+
+                        <h3>Major Achievements</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Achieved over 30% infrastructure cost savings through Karpenter implementation and cluster optimization</li>
+                            <li>Reduced operational costs by 25% through strategic cluster provisioning and algorithm optimizations</li>
+                            <li>Improved customer satisfaction by 20% through rapid issue resolution and feature delivery</li>
+                            <li>Achieved 90%+ code coverage through comprehensive test strategies and automation frameworks</li>
+                            <li>Enhanced system stability by preventing overloads through adaptive throttling mechanisms</li>
+                        </ul>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Java</span>
+                            <span class="tag">Go</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">Spark</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience-ttu" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
+                    <h1>IT Student Assistant at Texas Tech University</h1>
+                    <p>Technical support and knowledge management • Oct, 2019 - Dec, 2021</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Role Overview</h3>
+                        <p>Provided comprehensive IT support at Texas Tech University's IT Help Central, delivering technical assistance to students, faculty, and staff while managing knowledge base solutions and supervising student assistants.</p>
+
+                        <h3>Key Responsibilities</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Diagnosed and troubleshot 5-8 IT-related issues per hour via phone and in-person support</li>
+                            <li>Provided technical support for hardware, software, network troubleshooting, and account management</li>
+                            <li>Supervised student assistants in developing and reviewing knowledge base solutions</li>
+                            <li>Maintained detailed documentation of recurring technical issues and solutions</li>
+                            <li>Collaborated with IT teams to escalate complex technical problems</li>
+                        </ul>
+
+                        <h3>Major Achievements</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Improved customer satisfaction and efficiency by 20% through enhanced support processes</li>
+                            <li>Increased knowledge base utilization by both customers and support agents by 20%</li>
+                            <li>Maintained high-volume support delivery while ensuring quality resolution of technical issues</li>
+                            <li>Developed streamlined troubleshooting procedures adopted by the support team</li>
+                        </ul>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Technical Support</span>
+                            <span class="tag">Hardware Troubleshooting</span>
+                            <span class="tag">Network Diagnostics</span>
+                            <span class="tag">Windows & macOS</span>
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">Knowledge Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience-paycom" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
+                    <h1>Software Developer Intern at Paycom</h1>
+                    <p>Internal social media platform development • May, 2021 - Aug, 2021</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Internship Overview</h3>
+                        <p>Collaborated with the development team at Paycom to create an internal social media application designed to enhance employee engagement and increase Paycom app usage across the organization.</p>
+
+                        <h3>Key Projects & Achievements</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Developed a comprehensive internal social media application that increased Paycom app usage by 50%</li>
+                            <li>Created reusable UI components using React, reducing development time by 30% with improved code coverage</li>
+                            <li>Integrated REST API services and implemented caching with Redux store for efficient data management</li>
+                            <li>Reduced API calls by 40% through strategic caching implementation</li>
+                            <li>Implemented Socket.io for real-time event-based communication between client and server</li>
+                        </ul>
+
+                        <h3>Technical Implementation</h3>
+                        <p>Built a modern React-based application with real-time communication capabilities, focusing on user experience and performance optimization. The project involved full-stack development with emphasis on creating scalable and maintainable code architecture.</p>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Redux</span>
+                            <span class="tag">Socket.io</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience-ilsnyc2" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
+                    <h1>Information Technology Intern at Innovative Lab Solutions</h1>
+                    <p>Performance optimization and CI/CD automation • Jun, 2019 - Aug, 2019</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Internship Overview</h3>
+                        <p>Focused on improving application performance, implementing automated testing frameworks, and establishing CI/CD pipelines to accelerate software development and deployment processes.</p>
+
+                        <h3>Key Achievements</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Identified and resolved memory leaks in web applications, significantly improving memory usage efficiency</li>
+                            <li>Developed comprehensive JUnit test cases achieving 90% code coverage</li>
+                            <li>Implemented GitHub Actions for CI/CD automation, accelerating software release cycle by 50%</li>
+                            <li>Enhanced application performance through systematic optimization techniques</li>
+                            <li>Contributed to quality assurance processes through automated testing implementation</li>
+                        </ul>
+
+                        <h3>Technical Skills Developed</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Memory profiling and performance optimization techniques</li>
+                            <li>Unit testing with JUnit framework</li>
+                            <li>CI/CD pipeline setup and configuration</li>
+                            <li>Code quality analysis and improvement strategies</li>
+                        </ul>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Java</span>
+                            <span class="tag">JUnit</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">Performance Testing</span>
+                            <span class="tag">Memory Profiling</span>
+                            <span class="tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience-ilsnyc1" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
+                    <h1>Administrative Assistant at Innovative Lab Solutions</h1>
+                    <p>Office operations and document management • Feb, 2018 - Aug, 2018</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Role Overview</h3>
+                        <p>Provided comprehensive administrative support for Innovative Lab Solutions, utilizing advanced proficiency in Microsoft Office Suite to streamline office operations and ensure accurate document management.</p>
+
+                        <h3>Key Responsibilities</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Utilized advanced MS Office Suite capabilities to support daily office operations</li>
+                            <li>Managed precise data entry and document preparation tasks</li>
+                            <li>Streamlined office processes through efficient workflow organization</li>
+                            <li>Maintained high standards of accuracy in all administrative tasks</li>
+                            <li>Supported team coordination and communication activities</li>
+                        </ul>
+
+                        <h3>Skills Developed</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Advanced proficiency in Microsoft Office Suite (Word, Excel, PowerPoint, Outlook)</li>
+                            <li>Strong attention to detail in document management and data entry</li>
+                            <li>Efficient workflow optimization and process improvement</li>
+                            <li>Professional communication and organizational skills</li>
+                        </ul>
+
+                        <h3>Core Competencies</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Microsoft Office Suite</span>
+                            <span class="tag">Data Entry</span>
+                            <span class="tag">Document Management</span>
+                            <span class="tag">Administrative Support</span>
+                            <span class="tag">Process Optimization</span>
+                            <span class="tag">Attention to Detail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience-nycha" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
+                    <h1>Student Customer Service Representative at NYCHA</h1>
+                    <p>High-volume customer service and emergency response • Jun, 2017 - Dec, 2017</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Role Overview</h3>
+                        <p>Provided exceptional customer service in a fast-paced, high-volume call center environment at the New York City Housing Authority, handling resident inquiries and coordinating emergency responses for public housing communities.</p>
+
+                        <h3>Key Responsibilities</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Managed an average of 18+ incoming calls per hour while maintaining professionalism</li>
+                            <li>Provided comprehensive customer service for NYC Housing Authority residents</li>
+                            <li>Handled emergency calls and dispatched appropriate services for timely response</li>
+                            <li>Coordinated with various departments to resolve resident concerns efficiently</li>
+                            <li>Maintained detailed call logs and incident reports for follow-up actions</li>
+                        </ul>
+
+                        <h3>Skills Developed</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>High-pressure customer service in fast-paced environment</li>
+                            <li>Emergency response coordination and crisis management</li>
+                            <li>Multi-tasking and time management under pressure</li>
+                            <li>Clear communication with diverse populations</li>
+                            <li>Problem-solving and conflict resolution skills</li>
+                        </ul>
+
+                        <h3>Key Competencies</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Customer Service</span>
+                            <span class="tag">Call Center Operations</span>
+                            <span class="tag">Emergency Response</span>
+                            <span class="tag">Communication Skills</span>
+                            <span class="tag">Problem Solving</span>
+                            <span class="tag">Crisis Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Project Details -->
+        <div id="project-agent" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('projects')">← Back to Projects</button>
+                    <h1>Self-Learning Conversational Agent</h1>
+                    <p>Reinforcement learning-powered chatbot using RASA • Jun 2021 - Dec 2021</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Project Overview</h3>
+                        <p>Developed a sophisticated reinforcement learning-based conversational agent using the RASA framework. The project involved implementing Q-learning algorithms that enable the chatbot to improve its responses based on user feedback, achieving over 80% accuracy through advanced reward engineering.</p>
+
+                        <h3>Key Features</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Self-learning capabilities through Q-learning algorithm implementation</li>
+                            <li>User feedback integration for continuous improvement</li>
+                            <li>Deep Q-Network (DQN) architecture with experience replay buffer</li>
+                            <li>Natural language understanding confidence-based reward system</li>
+                            <li>Over 20% accuracy improvement through reinforcement learning training</li>
+                        </ul>
+
+                        <h3>Technical Implementation</h3>
+                        <p>The system utilizes a sophisticated reward engineering approach based on natural language understanding confidence levels. The Deep Q-Network architecture with experience replay enables the agent to learn from past interactions and continuously improve its conversational abilities.</p>
+
+                        <h3>Research Contributions</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Conducted rigorous research on self-learning chatbot development</li>
+                            <li>Developed novel reward engineering strategies for conversational AI</li>
+                            <li>Achieved 80%+ accuracy through effective reinforcement learning implementation</li>
+                            <li>Integrated experience replay buffer for enhanced learning capabilities</li>
+                        </ul>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">RASA</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Deep Q-Networks (DQN)</span>
+                            <span class="tag">Natural Language Processing</span>
+                            <span class="tag">Q-Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="project-resq" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('projects')">← Back to Projects</button>
+                    <h1>ResQ - Emergency Response Mobile App</h1>
+                    <p>Cross-platform disaster response application • 2020</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Project Overview</h3>
+                        <p>Developed ResQ, a cross-platform mobile application designed to connect disaster victims with nearby emergency responders and volunteers. The app leverages location-based services to facilitate rapid emergency response coordination during natural disasters and crisis situations.</p>
+
+                        <h3>Key Features</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Real-time location-based matching of victims with nearby responders</li>
+                            <li>Cross-platform compatibility for iOS and Android devices</li>
+                            <li>Emergency alert system with push notifications</li>
+                            <li>Integrated mapping and navigation for responder coordination</li>
+                            <li>Secure user authentication and profile management</li>
+                        </ul>
+
+                        <h3>Technical Architecture</h3>
+                        <p>Built using React Native for cross-platform development, with Firebase backend services providing real-time data synchronization and Google Cloud Platform services for scalable infrastructure. The application utilizes React Navigation for seamless user experience across different screens and functionalities.</p>
+
+                        <h3>Impact & Use Cases</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Enables rapid response coordination during natural disasters</li>
+                            <li>Reduces emergency response time through efficient victim-responder matching</li>
+                            <li>Provides offline capabilities for areas with limited connectivity</li>
+                            <li>Supports various emergency scenarios including floods, earthquakes, and storms</li>
+                        </ul>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">React Native</span>
+                            <span class="tag">React Navigation</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Google Cloud Platform</span>
+                            <span class="tag">Location Services</span>
+                            <span class="tag">Push Notifications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="project-foodweb" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('projects')">← Back to Projects</button>
+                    <h1>Foodweb - Restaurant Discovery Platform</h1>
+                    <p>Web application using MVC architecture and multiple APIs • Oct 2019 - Dec 2019</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Project Overview</h3>
+                        <p>Collaborated with a team to develop a comprehensive restaurant discovery web application using the MVC design pattern. The platform provides users with detailed information about top restaurants in any area, incorporating real-time data from multiple APIs to deliver comprehensive dining insights.</p>
+
+                        <h3>Key Features</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Restaurant discovery based on location and user reviews</li>
+                            <li>Integration with Google Maps API for location services and mapping</li>
+                            <li>Zomato API integration for comprehensive restaurant data and reviews</li>
+                            <li>Weather API integration to provide dining-relevant weather information</li>
+                            <li>Clean MVC architecture for maintainable and scalable code</li>
+                        </ul>
+
+                        <h3>Technical Implementation</h3>
+                        <p>The application follows the Model-View-Controller design pattern, ensuring separation of concerns and code maintainability. Multiple API integrations provide users with real-time restaurant information, reviews, location data, and weather conditions that might affect their dining experience.</p>
+
+                        <h3>Team Collaboration</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Worked in an Agile development environment with regular sprint cycles</li>
+                            <li>Implemented version control best practices using Git</li>
+                            <li>Participated in code reviews and pair programming sessions</li>
+                            <li>Contributed to both frontend user interface and backend API integration</li>
+                        </ul>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MVC Architecture</span>
+                            <span class="tag">Google Maps API</span>
+                            <span class="tag">Zomato API</span>
+                            <span class="tag">Weather API</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="project-stock" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('projects')">← Back to Projects</button>
+                    <h1>Extended Level Boomers - Algorithmic Trading</h1>
+                    <p>High-performance stock and ETF trading algorithm • Oct 2018 - Nov 2018</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Project Overview</h3>
+                        <p>Designed and implemented a sophisticated algorithmic trading system in Java and SQL that achieved exceptional performance in both short-term and long-term stock and ETF trading positions. The algorithm demonstrated a remarkable 90% winning rate across various market conditions.</p>
+
+                        <h3>Key Achievements</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Achieved 90% winning rate for both short-term and long-term positions</li>
+                            <li>Developed comprehensive trading algorithms for stocks and ETFs</li>
+                            <li>Implemented robust data analysis and financial modeling techniques</li>
+                            <li>Created efficient data structures for real-time market data processing</li>
+                            <li>Designed risk management protocols to minimize potential losses</li>
+                        </ul>
+
+                        <h3>Technical Implementation</h3>
+                        <p>The trading system was built using Java for core algorithm development and SQL for efficient data management and historical analysis. The implementation focused on optimized data structures and algorithms to ensure rapid decision-making in volatile market conditions.</p>
+
+                        <h3>Features</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Real-time market data processing and analysis</li>
+                            <li>Multi-timeframe trading strategy implementation</li>
+                            <li>Advanced risk management and position sizing</li>
+                            <li>Historical backtesting capabilities</li>
+                            <li>Performance analytics and reporting</li>
+                        </ul>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Java</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Data Structures & Algorithms</span>
+                            <span class="tag">Financial Modeling</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Risk Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paper Details -->
+        <div id="paper-solar-panel" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('research')">← Back to Research</button>
+                    <h1>Efficient geometry of flexible solar panels optimized for the latitude of New York City</h1>
+                    <p>LaGuardia Community College • Oct 2017 - Aug 2018</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Research Overview</h3>
+                        <p>Conducted comprehensive research on optimizing flexible solar panel geometry specifically for New York City's latitude. The study focused on analyzing catenoid-shaped solar panels and their efficiency improvements over traditional flat panel designs.</p>
+
+                        <h3>Key Findings</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Achieved 0.5% efficiency improvement over traditional flat panel designs</li>
+                            <li>Demonstrated optimal geometry configurations for NYC's specific latitude (40.7°N)</li>
+                            <li>Analyzed the mathematical properties of catenoid-shaped solar panel surfaces</li>
+                            <li>Provided practical applications for urban solar energy deployment</li>
+                        </ul>
+
+                        <h3>Research Impact</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Led conference presentations to diverse audiences at MAA MathFest and SPIE conferences</li>
+                            <li>Resulted in 20% increase in student engagement in renewable energy research</li>
+                            <li>Contributed to understanding of geometric optimization in solar energy applications</li>
+                            <li>Published findings in SPIE Proceedings for broader scientific community access</li>
+                        </ul>
+
+                        <h3>Conference Presentations</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>"The Geometry of Solar Panels based on its Efficiency" - MAA MathFest, Denver, CO (August 2018)</li>
+                            <li>"Efficient geometry of flexible solar panels optimized for the latitude of New York City" - SPIE Nonimaging Optics XV, San Diego, CA (September 2018)</li>
+                        </ul>
+
+                        <h3>Research Tools</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Python</span>
+                            <span class="tag">Mathematica</span>
+                            <span class="tag">MATLAB</span>
+                            <span class="tag">Mathematical Modeling</span>
+                            <span class="tag">Solar Energy Analysis</span>
+                            <span class="tag">Geometric Optimization</span>
+                        </div>
+
+                        <h3>Publication</h3>
+                        <p style="font-style: italic; margin: 1rem 0;">Marciniak, M., Hassebo, Y., Enriquez-Torres, D., Prajapati, N., Kadel, R., & Michalakis, E. (2018). Efficient geometry of flexible solar panels optimized for the latitude of New York City. SPIE Proceedings, 10759. doi:10.1117/12.2321978</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="paper-earth-pressure" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('research')">← Back to Research</button>
+                    <h1>Accurate calculation of the Earth Pressure using numerical integration</h1>
+                    <p>LaGuardia Community College • December 2017</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Research Abstract</h3>
+                        <p>This research calculated the pressure inside the Earth as a function of distance from the center, utilizing two different Earth models to demonstrate the importance of realistic density profiles in geophysical calculations. The study achieved accurate pressure calculations through advanced numerical integration techniques.</p>
+
+                        <h3>Key Findings</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Calculated Earth's center pressure at approximately 364 GPa using the Preliminary Reference Earth Model (PREM)</li>
+                            <li>Demonstrated that uniform density models underestimate center pressure by a factor of 2 (172 GPa vs 364 GPa)</li>
+                            <li>Computed Earth's rotational inertia as 8.02×10³⁷ kg·m², showing 20% reduction from naive uniform distribution calculations</li>
+                            <li>Validated the critical importance of realistic density profiles for accurate geophysical modeling</li>
+                            <li>Showed that mass concentration at Earth's center significantly affects rotational properties</li>
+                        </ul>
+
+                        <h3>Methodology</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Implemented Simpson's 1/3 rule for numerical integration of complex density functions</li>
+                            <li>Applied the Preliminary Reference Earth Model (PREM) for realistic density distribution</li>
+                            <li>Compared results between uniform density and realistic density models</li>
+                            <li>Used Python with SciPy for mathematical computations and numerical analysis</li>
+                            <li>Integrated pressure equations from Earth's surface to center using variable density profiles</li>
+                            <li>Calculated mass enclosed as a function of radial distance for accurate force calculations</li>
+                        </ul>
+
+                        <h3>Mathematical Framework</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Derived pressure equations from hydrostatic equilibrium principles</li>
+                            <li>Used gravitational force balance with pressure gradient forces</li>
+                            <li>Applied spherical coordinate system for Earth's layered structure</li>
+                            <li>Implemented numerical integration with appropriate step sizes for accuracy</li>
+                        </ul>
+
+                        <h3>Scientific Contributions</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Demonstrated practical application of numerical integration in geophysics</li>
+                            <li>Provided educational framework for understanding Earth's internal structure</li>
+                            <li>Showed quantitative impact of density variations on pressure calculations</li>
+                            <li>Created computational model for Earth's internal pressure distribution</li>
+                        </ul>
+
+                        <h3>Technical Tools & Methods</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Python</span>
+                            <span class="tag">SciPy</span>
+                            <span class="tag">Numerical Integration</span>
+                            <span class="tag">Scientific Computing</span>
+                            <span class="tag">Geophysical Modeling</span>
+                            <span class="tag">LaTeX</span>
+                        </div>
+
+                        <h3>Research Impact</h3>
+                        <p>This work demonstrated the critical importance of using realistic Earth models in geophysical calculations and provided a computational framework that could be applied to other planetary bodies. The study showed how advanced numerical methods can provide accurate solutions to complex geophysical problems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
