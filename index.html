@@ -168,6 +168,17 @@
             <div class="container">
                 <h2 class="section-title">Work Experience</h2>
                 <div class="cards-grid">
+                    <div class="card" onclick="showDetail('experience', 'gra')">
+                        <h3>Graduate Research Assistant</h3>
+                        <p class="meta">Texas Tech University • Aug, 2025 - Present</p>
+                        <p>Developing production-scale HPC monitoring and anomaly detection systems, researching drift-aware model adaptation, and building transaction-processing services for ACCESS.</p>
+                        <div class="tags">
+                            <span class="tag">HPC Systems</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Online Monitoring</span>
+                            <span class="tag">Web Services & APIs</span>
+                        </div>
+                    </div>
                     <div class="card" onclick="showDetail('experience', 'salesforce')">
                         <h3>Software Engineer</h3>
                         <p class="meta">Salesforce • Jan, 2022 - Jan, 2025</p>
@@ -409,6 +420,58 @@
     <!-- Detail Pages Container -->
     <div id="detailPages" style="display: none;">
         <!-- Experience Details -->
+        <div id="experience-gra" class="page detail-page">
+            <div class="detail-header">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
+                    <h1>Graduate Research Assistant at Texas Tech University</h1>
+                    <p>HPC observability, adaptive anomaly detection, and research infrastructure • Aug, 2025 - Present</p>
+                </div>
+            </div>
+            <div class="detail-content">
+                <div class="container">
+                    <div style="max-width: 800px; margin: 0 auto;">
+                        <h3>Role Overview</h3>
+                        <p>Conducting systems and machine learning research for production high-performance computing environments. My work spans multimodal telemetry collection, offline experimentation, live anomaly detection, drift-aware adaptation, and reliable web services for research computing operations.</p>
+
+                        <h3>Offline and Online HPC Anomaly Detection</h3>
+                        <p>Designed an end-to-end anomaly detection framework that combines hardware telemetry, Slurm workload context, power measurements, and physics-informed evidence to identify operational faults across CPU and GPU nodes.</p>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Build asynchronous data pipelines for iDRAC/Redfish, Slurm, rack PDU, and cooling telemetry, with PostgreSQL-backed storage and processing</li>
+                            <li>Develop a multi-stage detection pipeline using statistical screening, workload-aware analysis, physics-based residuals, and gradient-boosted fusion</li>
+                            <li>Deploy online scoring at a five-minute cadence with safeguards for telemetry delay, enabling continuous detection on live cluster data</li>
+                            <li>Measure detection quality, alert lead time, runtime, memory footprint, and scaling behavior to assess operational feasibility</li>
+                        </ul>
+
+                        <h3>Drift-Aware Model Adaptation</h3>
+                        <p>Researching how anomaly detectors can adapt to legitimate changes in workloads and system behavior without learning from undiagnosed faults or poisoned telemetry.</p>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Develop a structure-aware admission layer that evaluates incoming data before it is used for model updates</li>
+                            <li>Combine operational records, system topology, physical constraints, and detector evidence to admit, quarantine, reject, or flag adaptation data</li>
+                            <li>Study safe retraining strategies that reduce detector staleness while preserving sensitivity to persistent and emerging anomalies</li>
+                        </ul>
+
+                        <h3>ACCESS</h3>
+                        <p>Contributing to the development and operation of a web service that receives, validates, processes, and responds to transactions exchanged through the ACCESS research computing ecosystem.</p>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li>Maintain API endpoints and transaction workflows for account, allocation, project, and user-management requests</li>
+                            <li>Implement validation, status tracking, success responses, and actionable failure handling for reliable transaction processing</li>
+                            <li>Investigate transaction histories and integration failures to support dependable communication between institutional systems</li>
+                        </ul>
+
+                        <h3>Technologies Used</h3>
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Slurm</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">HPC Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="experience-salesforce" class="page detail-page">
             <div class="detail-header">
                 <div class="container">
