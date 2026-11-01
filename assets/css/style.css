@@ -405,7 +405,7 @@ a:hover {
 
 .entry {
     display: grid;
-    grid-template-columns: 9.5rem 1fr;
+    grid-template-columns: 10.5rem 1fr;
     gap: 20px;
     padding: 14px 0;
     border-bottom: 1px dashed var(--rule);
@@ -420,6 +420,7 @@ a:hover {
     font-size: 0.9rem;
     font-variant-numeric: tabular-nums;
     padding-top: 2px;
+    white-space: nowrap;
 }
 
 .entry-title {
