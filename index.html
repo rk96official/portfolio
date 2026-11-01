@@ -3,1061 +3,1056 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rupak Kadel - Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Rupak Kadel</title>
+    <meta name="description" content="Rupak Kadel — PhD researcher in Computer Science at Texas Tech University working on reliability and interpretable anomaly detection for HPC systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <!-- Loading Spinner -->
-    <div class="loading" id="loading">
-        <div class="spinner"></div>
-    </div>
+    <!-- Icon sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+        <symbol id="i-scholar" viewBox="0 0 24 24"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+        <symbol id="i-rg" viewBox="0 0 24 24"><path d="M3 2h18a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm4.2 5.2v9.6h1.9v-3.9h1l2.1 3.9h2.2l-2.4-4.2c1.1-.4 1.8-1.3 1.8-2.6 0-1.8-1.3-2.8-3.3-2.8H7.2zm1.9 1.6h1.2c.9 0 1.4.4 1.4 1.2s-.5 1.3-1.4 1.3H9.1V8.8zm8.4-.4c-1.6 0-2.5 1.1-2.5 2.6v1.2c0 1.6.9 2.6 2.4 2.6 1.4 0 2.4-.9 2.4-2.4v-1h-2.3v1.1h1v.1c0 .6-.4 1-1 1s-1-.4-1-1.2V11c0-.8.4-1.3 1-1.3.5 0 .9.3 1 .8h1.3c-.1-1.2-1-2.1-2.3-2.1z"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></symbol>
+    </svg>
 
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">Rupak Kadel</div>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="#about" class="brand">Rupak Kadel</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#" onclick="showPage('home')" class="nav-link active">Home</a></li>
-                <li><a href="#" onclick="showPage('about')" class="nav-link">About</a></li>
-                <li><a href="#" onclick="showPage('experience')" class="nav-link">Experience</a></li>
-                <li><a href="#" onclick="showPage('projects')" class="nav-link">Projects</a></li>
-                <li><a href="#" onclick="showPage('research')" class="nav-link">Research</a></li>
-                <li><a href="#" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="mobile-menu" id="mobileMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Home Page -->
-    <div id="home" class="page active">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Rupak Kadel</h1>
-                <p class="subtitle">PhD Researcher & Software Engineer</p>
-                <p class="description">
-                    Passionate about creating innovative solutions at the intersection of artificial intelligence,
-                    web development, and human-computer interaction.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#" onclick="showPage('projects')" class="btn btn-primary">View My Work</a>
-                    <a href="#" onclick="showPage('contact')" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-        </section>
-    </div>
+    <main class="container">
 
-    <!-- About Page -->
-    <div id="about" class="page">
-        <section class="section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8; margin-bottom: 4rem;">
-                    <p>I'm a passionate researcher and developer currently pursuing my PhD in Computer Science with a focus on 
-                    Machine Learning and Human-Computer Interaction. With over 4 years of experience in software development 
-                    and research, I love tackling complex problems and creating innovative solutions.</p>
+        <!-- ================================================================
+             ABOUT (home)
+             ================================================================ -->
+        <section id="about" class="page">
+            <div class="profile">
+                <div class="photo-frame">
+                    <img id="profilePhoto" src="assets/img/profile.jpg" alt="Portrait of Rupak Kadel">
+                    <div id="photoPlaceholder" class="photo-placeholder" hidden aria-hidden="true">RK</div>
                 </div>
-
-                <h3 class="section-title">Education</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>PhD in Computer Science</h3>
-                            <h4>Texas Tech University</h4>
-                            <p class="meta">In Progress</p>
-                            <p class="meta">GPA: 3.892/4.0</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>MS in Software Engineering</h3>
-                            <h4>Texas Tech University</h4>
-                            <p class="meta">December 2021</p>
-                            <p class="meta">GPA: 3.892/4.0</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>BS in Computer Science</h3>
-                            <h4>Texas Tech University</h4>
-                            <p class="meta">December 2021</p>
-                            <p class="meta">GPA: 3.882/4.0</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>AS in Computer Science</h3>
-                            <h4>LaGuardia Community College</h4>
-                            <p class="meta">December 2018</p>
-                            <p class="meta">GPA: 3.857/4.0</p>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="section-title">Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Programming Languages & Databases</h4>
-                        <div class="skill-list">
-                            <span class="skill-item">Java</span>
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">C++</span>
-                            <span class="skill-item">Go</span>
-                            <span class="skill-item">SQL</span>
-                            <span class="skill-item">R</span>
-                            <span class="skill-item">Shell/Bash</span>
-                        </div>
-                    </div>
-                
-                    <div class="skill-category">
-                        <h4>Web Technologies</h4>
-                        <div class="skill-list">
-                            <span class="skill-item">React</span>
-                            <span class="skill-item">Node.js</span>
-                            <span class="skill-item">Vue.js</span>
-                            <span class="skill-item">Express</span>
-                            <span class="skill-item">Spring Boot</span>
-                            <span class="skill-item">REST APIs</span>
-                            <span class="skill-item">gRPC</span>
-                        </div>
-                    </div>
-                
-                    <div class="skill-category">
-                        <h4>Machine Learning</h4>
-                        <div class="skill-list">
-                            <span class="skill-item">TensorFlow</span>
-                            <span class="skill-item">PyTorch</span>
-                            <span class="skill-item">Scikit-learn</span>
-                            <span class="skill-item">Pandas</span>
-                            <span class="skill-item">NumPy</span>
-                            <span class="skill-item">Keras</span>
-                            <span class="skill-item">Spark MLlib</span>
-                            <span class="skill-item">Graph Neural Networks</span>
-                            <span class="skill-item">Matplotlib</span>
-                        </div>
-                    </div>
-                
-                    <div class="skill-category">
-                        <h4>Tools & Platforms</h4>
-                        <div class="skill-list">
-                            <span class="skill-item">AWS</span>
-                            <span class="skill-item">Docker</span>
-                            <span class="skill-item">Kubernetes</span>
-                            <span class="skill-item">Git</span>
-                            <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">CI/CD (Jenkins, GitHub Actions)</span>
-                            <span class="skill-item">Terraform</span>
-                        </div>
+                <div>
+                    <h1>Rupak Kadel</h1>
+                    <p class="role">PhD Student &amp; Graduate Research Assistant</p>
+                    <p class="affil">Department of Computer Science, Texas Tech University</p>
+                    <div class="icon-links">
+                        <a href="#contact"><svg class="icon"><use href="#i-mail"/></svg>Email</a>
+                        <a href="https://scholar.google.com/citations?user=Psl7B20AAAAJ" target="_blank" rel="noopener"><svg class="icon"><use href="#i-scholar"/></svg>Scholar</a>
+                        <a href="https://github.com/rk96official" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"/></svg>GitHub</a>
+                        <a href="https://linkedin.com/in/rk96official" target="_blank" rel="noopener"><svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn</a>
+                        <a href="https://www.researchgate.net/profile/Rupak-Kadel" target="_blank" rel="noopener"><svg class="icon"><use href="#i-rg"/></svg>ResearchGate</a>
+                        <!-- Uncomment once assets/resume/Rupak_Kadel_CV.pdf exists
+                        <a href="assets/resume/Rupak_Kadel_CV.pdf" target="_blank" rel="noopener">CV</a>
+                        -->
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
 
-    <!-- Experience Page -->
-    <div id="experience" class="page">
-        <section class="section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="cards-grid">
-                    <div class="card" onclick="showDetail('experience', 'gra')">
-                        <h3>Graduate Research Assistant</h3>
-                        <p class="meta">Texas Tech University • Aug, 2025 - Present</p>
-                        <p>Developing production-scale HPC monitoring and anomaly detection systems, researching drift-aware model adaptation, and building transaction-processing services for ACCESS.</p>
-                        <div class="tags">
-                            <span class="tag">HPC Systems</span>
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Online Monitoring</span>
-                            <span class="tag">Web Services & APIs</span>
-                        </div>
+            <div class="bio">
+                <p>I am a PhD student in Computer Science at Texas Tech University and a former Software Engineer
+                    at Salesforce (Data Cloud). My research focuses on system reliability and anomaly detection in
+                    high-performance computing (HPC) environments, analyzing heterogeneous multivariate time-series
+                    telemetry from BMC sensors, job schedulers, and facility power systems.</p>
+                <p>Currently, I am building <a href="#research-insight-hpc">INSIGHT-HPC</a>, a multi-plane anomaly
+                    detection system that combines statistical, workload-aware, and physics-guided evidence into
+                    interpretable, operator-facing alerts on the NSF-funded REPACSS cluster. By bridging large-scale
+                    software engineering with applied machine learning, I aim to build observable, trustworthy systems
+                    that keep large-scale computing infrastructure reliable.</p>
+                <ul class="interests" aria-label="Research interests">
+                    <li>HPC Reliability</li>
+                    <li>Anomaly Detection</li>
+                    <li>Interpretable ML</li>
+                    <li>System Telemetry</li>
+                    <li>Scientific Machine Learning</li>
+                </ul>
+            </div>
+
+            <h2 class="section-heading">News</h2>
+            <!-- Newest first. Items past data-limit collapse behind a "Show more" button. -->
+            <ul class="entries news" data-limit="6">
+                <li class="entry">
+                    <span class="entry-date">Oct 2026</span>
+                    <p>Completed a reimplementation and reproduction study of
+                        <a href="#research-fcg-no">FCG-NO</a> (ICML '24), neural operator preconditioners for the
+                        flexible conjugate gradient method.</p>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Oct 2026</span>
+                    <p>Our paper <b>INSIGHT-HPC: An Interpretable System Intelligence for Global HPC
+                        Telemetry</b> has been accepted to <b>IEEE BigData'26</b> (acceptance rate: 19.4%). <a href="#research-insight-hpc">Read the summary &rarr;</a></p>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Sep 2026</span>
+                    <p>Served as a paper reviewer for a <b>NeurIPS 2026</b> workshop.</p>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Jul 2026</span>
+                    <p>Received the <b>PEARC '26 Bridge Grant</b> and served on the <b>PEARC '26 Program Committee</b> (Student Volunteers Subcommittee).</p>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Aug 2025</span>
+                    <p>Joined Texas Tech University as a Graduate Research Assistant, working on HPC monitoring and
+                        anomaly detection.</p>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Jan 2025</span>
+                    <p>Wrapped up three years as a Software Engineer on Salesforce Data Cloud.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================================================================
+             EDUCATION
+             ================================================================ -->
+        <section id="education" class="page">
+            <h1 class="page-title">Education</h1>
+
+            <ul class="entries">
+                <li class="entry">
+                    <span class="entry-date">In progress</span>
+                    <div>
+                        <p class="entry-title">Ph.D. in Computer Science</p>
+                        <p class="entry-org">Texas Tech University, Lubbock, TX</p>
+                        <p class="entry-body">GPA: 3.937 / 4.0 &middot; Research: reliability and anomaly detection for HPC systems</p>
                     </div>
-                    <div class="card" onclick="showDetail('experience', 'salesforce')">
-                        <h3>Software Engineer</h3>
-                        <p class="meta">Salesforce • Jan, 2022 - Jan, 2025</p>
-                        <p>Engineered scalable microservices for Salesforce Data Cloud, cutting infrastructure costs by 30%+ and boosting Spark job efficiency.</p>
-                        <div class="tags">
-                            <span class="tag">Java, Go & SQL</span>
-                            <span class="tag">gRPC & Jenkins</span>
-                            <span class="tag">Docker & Kubernetes</span>
-                            <span class="tag">AWS & Terraform</span>
-                        </div>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Dec 2021</span>
+                    <div>
+                        <p class="entry-title">M.S. in Software Engineering</p>
+                        <p class="entry-org">Texas Tech University, Lubbock, TX</p>
+                        <p class="entry-body">GPA: 3.892 / 4.0</p>
                     </div>
-                    <div class="card" onclick="showDetail('experience', 'ttu')">
-                        <h3>IT Student Assistant</h3>
-                        <p class="meta">IT Help Central, Texas Tech University • Oct, 2019 - Dec, 2021</p>
-                        <p>Delivered rapid IT support and knowledge solutions, improving customer satisfaction and efficiency by 20%.</p>
-                        <div class="tags">
-                            <span class="tag">Technical Support</span>
-                            <span class="tag">Troubleshooting</span>
-                            <span class="tag">Knowledge Base Management</span>
-                            <span class="tag">Customer Service</span>
-                        </div>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Dec 2021</span>
+                    <div>
+                        <p class="entry-title">B.S. in Computer Science</p>
+                        <p class="entry-org">Texas Tech University, Lubbock, TX</p>
+                        <p class="entry-body">GPA: 3.882 / 4.0</p>
                     </div>
-                    <div class="card" onclick="showDetail('experience', 'paycom')">
-                        <h3>Software Developer Intern</h3>
-                        <p class="meta">Paycom • May, 2021 - Aug, 2021</p>
-                        <p>Built a social media platform and reusable React components, increasing app engagement by 50% and reducing dev time by 30%.</p>
-                        <div class="tags">
-                            <span class="tag">React.js</span>
-                            <span class="tag">Redux</span>
-                            <span class="tag">Socket.io</span>
-                            <span class="tag">Postman</span>
-                        </div>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Dec 2018</span>
+                    <div>
+                        <p class="entry-title">A.S. in Computer Science</p>
+                        <p class="entry-org">LaGuardia Community College (CUNY), New York, NY</p>
+                        <p class="entry-body">GPA: 3.857 / 4.0 &middot; Undergraduate research in
+                            <a href="#paper-solar-panel">solar panel geometry</a> and
+                            <a href="#paper-earth-pressure">computational geophysics</a></p>
                     </div>
-                    <div class="card" onclick="showDetail('experience', 'ilsnyc2')">
-                        <h3>Information Technology Intern</h3>
-                        <p class="meta">Innovative Lab Solutions • Jun, 2019 - Aug, 2019</p>
-                        <p>Optimized application performance and automated CI/CD pipelines, accelerating software releases.</p>
-                        <div class="tags">
-                            <span class="tag">Performance Optimization</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">JUnit Testing</span>
-                            <span class="tag">Data Entry</span>
-                        </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================================================================
+             EXPERIENCE
+             ================================================================ -->
+        <section id="experience" class="page">
+            <h1 class="page-title">Experience</h1>
+
+            <h2 class="subheading">Research</h2>
+            <ul class="entries">
+                <li class="entry">
+                    <span class="entry-date">Aug 2025 – Present</span>
+                    <div>
+                        <p class="entry-title">Graduate Research Assistant</p>
+                        <p class="entry-org">Department of Computer Science, Texas Tech University</p>
+                        <p class="entry-body">Research on reliability and interpretable anomaly detection for production HPC
+                            systems, along with the telemetry infrastructure and ACCESS transaction services behind it.</p>
+                        <p class="entry-links">
+                            <a href="#experience-gra">Role details &rarr;</a>
+                            <a href="#research-insight-hpc">Research: INSIGHT-HPC &rarr;</a>
+                        </p>
                     </div>
-                    <div class="card" onclick="showDetail('experience', 'ilsnyc1')">
-                        <h3>Administrative Assistant</h3>
-                        <p class="meta">Innovative Lab Solutions • Feb, 2018 - Aug, 2018</p>
-                        <p>Supported office operations with advanced MS Office skills, streamlining workflows and ensuring precise document management.</p>
-                        <div class="tags">
-                            <span class="tag">Microsoft Office Suite</span>
-                            <span class="tag">Data Entry</span>
-                            <span class="tag">Administrative Support</span>
-                            <span class="tag">Attention to Detail</span>
-                        </div>
+                </li>
+            </ul>
+
+            <h2 class="subheading">Industry</h2>
+            <ul class="entries">
+                <li class="entry">
+                    <span class="entry-date">Jan 2022 – Jan 2025</span>
+                    <div>
+                        <p class="entry-title">Software Engineer (AMTS & MTS)</p>
+                        <p class="entry-org">Salesforce</p>
+                        <p class="entry-body">Built microservices to provision and manage Amazon EMR and Kubernetes
+                            infrastructure for Spark workloads, cutting infrastructure costs by more than 30%.</p>
+                        <p class="entry-links"><a href="#experience-salesforce">Details &rarr;</a></p>
                     </div>
-                    <div class="card" onclick="showDetail('experience', 'nycha')">
-                        <h3>Student Customer Service Representative</h3>
-                        <p class="meta">New York City Housing Authority (RF CUNY) • Jun, 2017 - Dec, 2017</p>
-                        <p>Delivered high-volume customer service at NYC Housing Authority, handling 18+ calls per hour and coordinating timely emergency responses.</p>
-                        <div class="tags">
-                            <span class="tag">Customer Service</span>
-                            <span class="tag">Call Center Operations</span>
-                            <span class="tag">Communication</span>
-                            <span class="tag">Problem Solving</span>
-                        </div>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">May 2021 – Aug 2021</span>
+                    <div>
+                        <p class="entry-title">Software Developer Intern</p>
+                        <p class="entry-org">Paycom</p>
+                        <p class="entry-body">Built an internal social platform and reusable React components; increased
+                            app engagement by 50%.</p>
+                        <p class="entry-links"><a href="#experience-paycom">Details &rarr;</a></p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Jun 2019 – Aug 2019</span>
+                    <div>
+                        <p class="entry-title">Information Technology Intern</p>
+                        <p class="entry-org">Innovative Lab Solutions</p>
+                        <p class="entry-body">Fixed memory leaks, reached 90% JUnit coverage, and automated CI/CD with
+                            GitHub Actions.</p>
+                        <p class="entry-links"><a href="#experience-ilsnyc2">Details &rarr;</a></p>
+                    </div>
+                </li>
+            </ul>
+
+            <h2 class="subheading">Other roles</h2>
+            <ul class="entries">
+                <li class="entry">
+                    <span class="entry-date">Oct 2019 – Dec 2021</span>
+                    <div>
+                        <p class="entry-title">IT Student Assistant &middot; <span class="entry-org">IT Help Central, Texas Tech University</span></p>
+                        <p class="entry-links"><a href="#experience-ttu">Details &rarr;</a></p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Feb 2018 – Aug 2018</span>
+                    <div>
+                        <p class="entry-title">Administrative Assistant &middot; <span class="entry-org">Innovative Lab Solutions</span></p>
+                        <p class="entry-links"><a href="#experience-ilsnyc1">Details &rarr;</a></p>
+                    </div>
+                </li>
+                <li class="entry">
+                    <span class="entry-date">Jun 2017 – Dec 2017</span>
+                    <div>
+                        <p class="entry-title">Student Customer Service Representative &middot; <span class="entry-org">NYC Housing Authority (RF CUNY)</span></p>
+                        <p class="entry-links"><a href="#experience-nycha">Details &rarr;</a></p>
+                    </div>
+                </li>
+            </ul>
+
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills">
+                <div>
+                    <h4>Languages &amp; Databases</h4>
+                    <div class="tags">
+                        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">Go</span>
+                        <span class="tag">C++</span><span class="tag">JavaScript</span><span class="tag">SQL</span>
+                        <span class="tag">R</span><span class="tag">Shell/Bash</span>
+                        <span class="tag">PostgreSQL</span><span class="tag">TimescaleDB</span>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Projects Page -->
-    <div id="projects" class="page">
-        <section class="section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="cards-grid">
-                    <div class="card" onclick="showDetail('project', 'agent')">
-                        <h3>Self-Learning Conversational Agent</h3>
-                        <p class="meta">Reinforcement Learning • 2021</p>
-                        <p>Built a reinforcement learning–powered chatbot in RASA, reaching 80%+ accuracy with Deep Q-Networks and experience replay.</p>
-                        <div class="tags">
-                            <span class="tag">RASA</span>
-                            <span class="tag">Natural Language Processing (NLP)</span>
-                            <span class="tag">Reinforcement Learning</span>
-                            <span class="tag">Deep Q-Networks (DQN)</span>
-                        </div>
+                <div>
+                    <h4>Machine Learning &amp; Scientific Computing</h4>
+                    <div class="tags">
+                        <span class="tag">PyTorch</span><span class="tag">JAX</span><span class="tag">TensorFlow</span>
+                        <span class="tag">scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+                        <span class="tag">SciPy</span><span class="tag">Spark MLlib</span><span class="tag">Graph Neural Networks</span>
                     </div>
-                    <div class="card" onclick="showDetail('project', 'resq')">
-                        <h3>ResQ</h3>
-                        <p class="meta">Mobile Application • 2020</p>
-                        <p>Developed a cross-platform, location-based app to connect disaster victims with nearby responders.</p>
-                        <div class="tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">React Navigation</span>
-                            <span class="tag">Google Cloud Platform (GCP)</span>
-                            <span class="tag">Firebase</span>
-                        </div>
+                </div>
+                <div>
+                    <h4>HPC &amp; Infrastructure</h4>
+                    <div class="tags">
+                        <span class="tag">Slurm</span><span class="tag">Redfish / iDRAC</span><span class="tag">AWS</span>
+                        <span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Terraform</span>
+                        <span class="tag">CI/CD</span><span class="tag">Git</span>
                     </div>
-                    <div class="card" onclick="showDetail('project', 'foodweb')">
-                        <h3>Foodweb</h3>
-                        <p class="meta">Web Application • 2019</p>
-                        <p>Developed a restaurant discovery web app using MVC pattern and multiple APIs, delivering real-time restaurant and weather insights.</p>
-                        <div class="tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MVC Architecture</span>
-                            <span class="tag">REST APIs</span>
-                        </div>
-                    </div>
-                    <div class="card" onclick="showDetail('project', 'stock')">
-                        <h3>Extended Level Boomers</h3>
-                        <p class="meta">Algorithmic Trading • 2018</p>
-                        <p>Designed a stock and ETF trading algorithm in Java and SQL, achieving a 90% win rate across short- and long-term positions.</p>
-                        <div class="tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Financial Modeling</span>
-                            <span class="tag">Data Structures and Algorithms</span>
-                        </div>
+                </div>
+                <div>
+                    <h4>Web &amp; Services</h4>
+                    <div class="tags">
+                        <span class="tag">REST APIs</span><span class="tag">gRPC</span><span class="tag">Spring Boot</span>
+                        <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">React</span>
+                        <span class="tag">Vue.js</span>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
 
-    <!-- Research Page -->
-    <div id="research" class="page">
-        <section class="section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">Research & Publications</h2>
-                <div class="cards-grid">
-                    <div class="card" onclick="showDetail('paper', 'solar-panel')">
-                        <h3>Efficient geometry of flexible solar panels optimized for the latitude of New York City</h3>
-                        <p class="meta">LaGuardia Community College • 2018</p>
-                        <p>Researched and optimized flexible solar panel geometry for NYC latitude, and presented findings at conferences to engage diverse audiences.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Mathematica</span>
-                            <span class="tag">MATLAB</span>
-                            <span class="tag">Flux</span>
+        <!-- ================================================================
+             RESEARCH
+             ================================================================ -->
+        <section id="research" class="page">
+            <h1 class="page-title">Research</h1>
+
+            <a class="card" href="#research-insight-hpc">
+                <p class="card-kicker">HPC Reliability &middot; 2025 – Present</p>
+                <h3>INSIGHT-HPC: Interpretable Anomaly Detection for Global HPC Telemetry</h3>
+                <p>A four-phase architecture that fuses statistical, workload-aware, and physics-guided evidence from BMC,
+                    Slurm, and PDU telemetry into de-duplicated fault episodes with operator-facing explanations.
+                    Evaluated on 79 days of production telemetry from the NSF-funded REPACSS cluster.</p>
+                <div class="stats">
+                    <div class="stat"><b>0.862</b><span>F1 score</span></div>
+                    <div class="stat"><b>0.913</b><span>Precision</span></div>
+                    <div class="stat"><b>0.896</b><span>AUROC</span></div>
+                    <div class="stat"><b>+31%</b><span>F1 vs. best baseline</span></div>
+                </div>
+                <span class="more">Read more &rarr;</span>
+            </a>
+
+            <a class="card" href="#research-fcg-no">
+                <p class="card-kicker">Scientific ML &middot; Reproducibility &middot; 2026</p>
+                <h3>Reproducing FCG-NO: Neural Operator Preconditioners for Flexible Conjugate Gradient</h3>
+                <p>An independent JAX reimplementation of FCG-NO (ICML '24) and every experiment in the paper. The qualitative
+                    findings reproduce, but the headline iteration counts and wall-clock savings do not. We trace the solver
+                    stalls to gaps between the convergence theory and the training procedure and propose targeted fixes.</p>
+                <div class="stats">
+                    <div class="stat"><b>4</b><span>Architectures re-implemented</span></div>
+                    <div class="stat"><b>93</b><span>Automated tests</span></div>
+                    <div class="stat"><b>4</b><span>Sources compared</span></div>
+                </div>
+                <span class="more">Read more &rarr;</span>
+            </a>
+
+            <div class="card">
+                <p class="card-kicker">HPC Reliability &middot; Ongoing</p>
+                <h3>Drift-Aware Model Adaptation for HPC Anomaly Detectors</h3>
+                <p>How can detectors adapt to legitimate changes in workloads and system behavior without learning from
+                    undiagnosed faults or poisoned telemetry? I am developing a structure-aware admission layer that uses
+                    operational records, system topology, physical constraints, and detector evidence to admit, quarantine,
+                    or reject data before it is used for model updates.</p>
+            </div>
+
+            <h2 class="section-heading">Earlier Research</h2>
+            <div class="card-grid">
+                <a class="card" href="#paper-solar-panel">
+                    <p class="card-kicker">LaGuardia Community College &middot; 2018</p>
+                    <h3>Efficient Geometry of Flexible Solar Panels for NYC's Latitude</h3>
+                    <p>Optimized catenoid-shaped flexible panel geometry; published in SPIE Proceedings and presented at MAA MathFest.</p>
+                    <span class="more">Read more &rarr;</span>
+                </a>
+                <a class="card" href="#paper-earth-pressure">
+                    <p class="card-kicker">LaGuardia Community College &middot; 2017</p>
+                    <h3>Earth's Internal Pressure via Numerical Integration</h3>
+                    <p>Modeled pressure and rotational inertia with realistic (PREM) density profiles using Simpson's rule.</p>
+                    <span class="more">Read more &rarr;</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             PUBLICATIONS
+             ================================================================ -->
+        <section id="publications" class="page">
+            <h1 class="page-title">Publications</h1>
+
+            <h2 class="subheading">Conference Proceedings</h2>
+            <ol class="pubs">
+                <li class="pub">
+                    <span class="venue">BigData '26</span>
+                    <div>
+                        <p class="pub-title">INSIGHT-HPC: An Interpretable System Intelligence for Global HPC Telemetry</p>
+                        <p class="pub-authors"><span class="me">Rupak Kadel</span>, Jie Li, Yong Chen</p>
+                        <p class="pub-venue">In Proceedings of the IEEE International Conference on Big Data (BigData '26), 2026</p>
+                        <p class="pub-links"><span class="status">Acceptance Rate: 203/1046 = 19.4%</span></p>
+                    </div>
+                </li>
+                <li class="pub">
+                    <span class="venue">SPIE '18</span>
+                    <div>
+                        <p class="pub-title">Efficient geometry of flexible solar panels optimized for the latitude of New York City</p>
+                        <p class="pub-authors">Malgorzata Marciniak, Yasser Hassebo, Delfino Enriquez-Torres, Nikesh Prajapati, <span class="me">Rupak Kadel</span>, Emmanuel Michalakis</p>
+                        <p class="pub-venue">In Proceedings Volume 10758, Nonimaging Optics: Efficient Design for Illumination and Solar Concentration XV, 2018</p>
+                        <p class="pub-links"><a href="https://doi.org/10.1117/12.2321978" target="_blank" rel="noopener">DOI</a></p>
+                    </div>
+                </li>
+            </ol>
+
+            <h2 class="subheading">Reports</h2>
+            <ol class="pubs">
+                <li class="pub">
+                    <span class="venue muted">Report</span>
+                    <div>
+                        <p class="pub-title">Reproducing FCG-NO: Neural Operator Preconditioners for the Flexible Conjugate Gradient Method</p>
+                        <p class="pub-authors">Batuhan Sencer, <span class="me">Rupak Kadel</span>, Abhijeet Pandey</p>
+                        <p class="pub-venue">Technical report, Texas Tech University, 2026</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ================================================================
+             PROJECTS
+             ================================================================ -->
+        <section id="projects" class="page">
+            <h1 class="page-title">Projects</h1>
+
+            <div class="card-grid">
+                <a class="card" href="#project-agent">
+                    <p class="card-kicker">Reinforcement Learning &middot; 2021</p>
+                    <h3>Self-Learning Conversational Agent</h3>
+                    <p>A reinforcement-learning chatbot in RASA that reached 80%+ accuracy with Deep Q-Networks and experience replay.</p>
+                    <div class="tags"><span class="tag">RASA</span><span class="tag">NLP</span><span class="tag">DQN</span></div>
+                </a>
+                <a class="card" href="#project-resq">
+                    <p class="card-kicker">Mobile Application &middot; 2020</p>
+                    <h3>ResQ</h3>
+                    <p>A cross-platform, location-based app connecting disaster victims with nearby responders.</p>
+                    <div class="tags"><span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">GCP</span></div>
+                </a>
+                <a class="card" href="#project-foodweb">
+                    <p class="card-kicker">Web Application &middot; 2019</p>
+                    <h3>Foodweb</h3>
+                    <p>An MVC restaurant-discovery web app that combines maps, review, and weather APIs.</p>
+                    <div class="tags"><span class="tag">Node.js</span><span class="tag">MVC</span><span class="tag">REST APIs</span></div>
+                </a>
+                <a class="card" href="#project-stock">
+                    <p class="card-kicker">Algorithmic Trading &middot; 2018</p>
+                    <h3>Extended Level Boomers</h3>
+                    <p>A stock and ETF trading algorithm in Java and SQL with a 90% win rate across short- and long-term positions.</p>
+                    <div class="tags"><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Data Analysis</span></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             SERVICE
+             ================================================================ -->
+        <section id="service" class="page">
+            <h1 class="page-title">Service</h1>
+
+            <h2 class="section-heading">Professional Service</h2>
+            <ul class="service-list">
+                <li>
+                    <span class="service-role">Program Committee</span>
+                    <span>PEARC '26 (Student Volunteers Subcommittee)</span>
+                </li>
+                <li>
+                    <span class="service-role">Paper Reviewer</span>
+                    <span>NeurIPS Workshop '26</span>
+                </li>
+            </ul>
+
+            <h2 class="section-heading">Honors &amp; Grants</h2>
+            <ul class="service-list">
+                <li>
+                    <span class="service-role">2026</span>
+                    <span>PEARC '26 Bridge Grant</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================================================================
+             CONTACT
+             ================================================================ -->
+        <section id="contact" class="page">
+            <h1 class="page-title">Contact</h1>
+            <p class="page-lede">I'm happy to talk about research collaborations, HPC reliability, or opportunities.</p>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <svg class="icon"><use href="#i-mail"/></svg>
+                    <div><b>Personal email</b><span>rkadelofficial@gmail.com</span></div>
+                    <button class="copy-btn" type="button" data-copy="rkadelofficial@gmail.com">Copy</button>
+                </div>
+                <a class="contact-item" href="https://scholar.google.com/citations?user=Psl7B20AAAAJ" target="_blank" rel="noopener">
+                    <svg class="icon"><use href="#i-scholar"/></svg>
+                    <div><b>Google Scholar</b><span>Publications &amp; citations</span></div>
+                </a>
+                <a class="contact-item" href="https://github.com/rk96official" target="_blank" rel="noopener">
+                    <svg class="icon"><use href="#i-github"/></svg>
+                    <div><b>GitHub</b><span>github.com/rk96official</span></div>
+                </a>
+                <a class="contact-item" href="https://linkedin.com/in/rk96official" target="_blank" rel="noopener">
+                    <svg class="icon"><use href="#i-linkedin"/></svg>
+                    <div><b>LinkedIn</b><span>linkedin.com/in/rk96official</span></div>
+                </a>
+                <a class="contact-item" href="https://www.researchgate.net/profile/Rupak-Kadel" target="_blank" rel="noopener">
+                    <svg class="icon"><use href="#i-rg"/></svg>
+                    <div><b>ResearchGate</b><span>Rupak-Kadel</span></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             DETAIL PAGES · Research
+             ================================================================ -->
+        <section id="research-insight-hpc" class="page" data-nav="research">
+            <a class="back" href="#research">&larr; Research</a>
+            <header class="detail-head">
+                <h1>INSIGHT-HPC: An Interpretable System Intelligence for Global HPC Telemetry</h1>
+                <p><b>Rupak Kadel</b>, Jie Li, Yong Chen &middot; IEEE BigData '26</p>
+            </header>
+            <div class="prose">
+                <h3>Motivation</h3>
+                <p>Modern HPC clusters mix generations of CPUs and GPUs that stream rich telemetry from baseboard management
+                    controllers (BMCs), job schedulers, and facility power distribution units (PDUs). Most detectors look at one
+                    telemetry plane at a time, rely on statistical deviation alone, and need stronger labels than production sites
+                    can provide. They also give operators little context: they often cannot tell a heavy job from a failing node.</p>
+                <p>INSIGHT-HPC progressively refines statistical deviations using <b>workload context</b> and <b>physical
+                    consistency</b>, then fuses the evidence into de-duplicated fault episodes with explanations operators can act on.</p>
+
+                <h3>Architecture</h3>
+                <div class="pipeline" role="img" aria-label="INSIGHT-HPC pipeline: data sources feed preprocessing, then Phases I to III, then Phase IV fusion, which emits tiered alerts">
+                    <div class="pipe-stage">
+                        <h4>Sources</h4>
+                        <ul><li>BMC sensors (Redfish)</li><li>Slurm jobs</li><li>Rack PDUs</li></ul>
+                    </div>
+                    <span class="pipe-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="pipe-stage">
+                        <h4>Preprocess</h4>
+                        <ul><li>Quality auditing</li><li>Per-minute master table</li><li>Regime-aware features</li></ul>
+                    </div>
+                    <span class="pipe-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="pipe-stage">
+                        <h4>Detect</h4>
+                        <div class="pipe-phases">
+                            <div><b>I</b> Statistical: rules, Isolation Forest, LSTM-AE</div>
+                            <div><b>II</b> Job-aware: segmentation, archetypes, peers</div>
+                            <div><b>III</b> Physics: power/thermal residuals, constraints</div>
                         </div>
                     </div>
-                    <div class="card" onclick="showDetail('paper', 'earth-pressure')">
-                        <h3>Accurate calculation of the Earth Pressure using numerical integration</h3>
-                        <p class="meta">LaGuardia Community College • 2017</p>
-                        <p>Modeled Earth’s internal pressure and rotational inertia using Python and numerical integration, applying realistic density profiles to improve scientific accuracy.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Numerical Integration</span>
-                            <span class="tag">Scientific Computing</span>
-                            <span class="tag">LaTeX</span>
-                        </div>
+                    <span class="pipe-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="pipe-stage emph">
+                        <h4>IV · Fuse</h4>
+                        <ul><li>Episode formation</li><li>Gradient-boosted classifier</li><li>TreeSHAP attribution</li></ul>
                     </div>
+                    <span class="pipe-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="pipe-stage">
+                        <h4>Alerts</h4>
+                        <ul><li>CRITICAL</li><li>CONFIRMED</li><li>CANDIDATE</li></ul>
+                    </div>
+                </div>
+                <ul>
+                    <li><b>Phase I, Statistical detectors.</b> Threshold rules, Isolation Forest, and an LSTM autoencoder screen
+                        each node-minute against its own history. Scores are converted to per-host trailing ranks, so firing rates
+                        stay stable when operating regimes shift.</li>
+                    <li><b>Phase II, Job-aware modeling.</b> Node timelines are segmented at Slurm job boundaries, and segments are
+                        clustered into workload archetypes. Nodes are scored against similar workloads and against their peers in
+                        the same job (Hampel z-score). On shared nodes, anomalies are attributed to the most likely job.</li>
+                    <li><b>Phase III, Physics reasoning.</b> Per-node-type Ridge models predict expected power and inlet temperature.
+                        Residuals are scaled with a rolling 14-day IQR. Four constraint rules check dynamics, cross-plane (PDU vs.
+                        BMC) agreement, allocation vs. utilization, and cooling response.</li>
+                    <li><b>Phase IV, Fusion.</b> Per-minute evidence is grouped into episodes, and a histogram gradient-boosting
+                        classifier assigns each one to an operating tier. Every alert ships with job context, violated constraints,
+                        dominant signals, and model attribution.</li>
+                </ul>
+
+                <h3>Evaluation</h3>
+                <p>The evaluation uses 79 days (Jan 1 – Mar 20, 2026) of production telemetry from the 118-node compute fleet of
+                    the NSF-funded <b>REPACSS</b> cluster: ~220K node-hours and 13,266 Slurm jobs. The test set has 169 labeled
+                    events across 85 hosts: 29 operator-recorded failures and 140 controlled fault injections covering thermal,
+                    power, cooling, resource, sensing, and cross-plane failure modes.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Method</th><th>Precision</th><th>Recall</th><th>F1</th><th>AUROC</th><th>AUPRC</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="ours"><td>INSIGHT-HPC</td><td>0.913</td><td>0.817</td><td>0.862</td><td>0.896</td><td>0.878</td></tr>
+                            <tr><td>Prodigy</td><td>0.599</td><td>0.735</td><td>0.660</td><td>0.666</td><td>0.450</td></tr>
+                            <tr><td>NodeSentry</td><td>0.710</td><td>0.452</td><td>0.552</td><td>0.379</td><td>0.489</td></tr>
+                            <tr><td>Isolation Forest</td><td>0.436</td><td>0.560</td><td>0.490</td><td>0.811</td><td>0.760</td></tr>
+                            <tr><td>LSTM-AE</td><td>0.491</td><td>0.470</td><td>0.480</td><td>0.728</td><td>0.758</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="caption">Test-split results at the validation-selected CONFIRMED operating point.</p>
+                <ul>
+                    <li><b>31% higher F1</b> than the strongest baseline. Learned fusion also beats fixed Boolean combinations of
+                        the phases (best: majority vote, F1 0.675).</li>
+                    <li><b>Tiered operating points:</b> CRITICAL reaches 0.979 precision; CANDIDATE reaches 0.899 recall.</li>
+                    <li><b>Robust to label timing:</b> a stricter 0/15-minute matching tolerance gives nearly the same F1 (0.856).</li>
+                    <li><b>Scales linearly:</b> the full 79-day, 118-node replay runs in ~43 minutes on one H100 node; frozen-model
+                        inference costs ~0.13 ms per node-minute.</li>
+                    <li><b>Portable:</b> on Prodigy's Eclipse benchmark, using Phase I alone, it stays within a few F1 points of
+                        Prodigy and outperforms NodeSentry.</li>
+                </ul>
+
+                <h3>Publication</h3>
+                <p class="citation">Kadel, R., Li, J., &amp; Chen, Y. (2026). INSIGHT-HPC: An interpretable system intelligence
+                    for global HPC telemetry. In Proceedings of the 2026 IEEE International Conference on Big Data (BigData).</p>
+
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span>
+                    <span class="tag">TimescaleDB</span><span class="tag">Slurm REST API</span><span class="tag">Redfish</span>
+                    <span class="tag">SHAP</span>
                 </div>
             </div>
         </section>
-    </div>
 
-    <!-- Contact Page -->
-    <div id="contact" class="page">
-        <section class="section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
-                    <p style="font-size: 1.1rem; color: var(--text-light);">
-                        I'm always interested in discussing new opportunities, research collaborations, 
-                        or just having a conversation about technology and innovation.
-                    </p>
+        <section id="research-fcg-no" class="page" data-nav="research">
+            <a class="back" href="#research">&larr; Research</a>
+            <header class="detail-head">
+                <h1>Reproducing FCG-NO: Neural Operator Preconditioners for the Flexible Conjugate Gradient Method</h1>
+                <p>Batuhan Sencer, <b>Rupak Kadel</b>, Abhijeet Pandey &middot; Texas Tech University &middot; 2026</p>
+            </header>
+            <div class="prose">
+                <h3>Background</h3>
+                <p>Neural operators can solve PDEs in a single forward pass, but their accuracy usually stalls between 0.1% and 1%
+                    relative error. FCG-NO
+                    (Rudikov et al., ICML '24) gets around this limit by using the network as a <em>preconditioner</em> inside
+                    Notay's flexible conjugate gradient (FCG) method, which tolerates nonlinear preconditioners. The solver keeps
+                    classical accuracy and uses the network only to converge faster. The operator is trained with a loss derived
+                    from Notay's convergence theorem, on residuals collected from CG runs.</p>
+
+                <h3>What We Built</h3>
+                <p>We rebuilt the full pipeline from scratch as a new JAX package, consulting the authors' repository only as a
+                    reference. It includes:</p>
+                <ul>
+                    <li>Data generation, Krylov-residual collection, and batched GPU implementations of CG and FCG</li>
+                    <li>Four preconditioner networks (spectral neural operator, FNO, dilated ResNet, U-Net) with the Notay and L2 losses</li>
+                    <li>Jacobi, Gauss–Seidel, and ILU baselines, plus three CG timing implementations</li>
+                    <li>93 automated tests. Loaded with the authors' weights, our networks match their outputs to floating-point
+                        precision, and FCG with the identity preconditioner reproduces CG iteration by iteration.</li>
+                </ul>
+                <p>For every experiment, we compared four sources where they exist: the published results, the authors' saved
+                    notebook runs, the authors' unmodified code, and our reimplementation.</p>
+
+                <h3>Findings</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Source</th><th>Poisson 32²</th><th>64²</th><th>128²</th><th>Diffusion 32²</th><th>64²</th><th>128²</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Paper</td><td>9</td><td>14</td><td>20</td><td>9</td><td>14</td><td>19</td></tr>
+                            <tr><td>Authors' code</td><td>11</td><td>19</td><td>–</td><td>15</td><td>38</td><td>24</td></tr>
+                            <tr class="ours"><td>Ours (paper settings)</td><td>11</td><td>20</td><td>–</td><td>11</td><td>20</td><td>–</td></tr>
+                            <tr><td>Ours (notebook settings)</td><td>11</td><td>18</td><td>35</td><td>16</td><td>21</td><td>24</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-                
-                <div class="social-links-container">
-                    <div class="social-links">
-                        <a href="mailto:rkadelofficial@gmail.com" class="social-link email-link">
-                            <div class="social-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                            </div>
-                            <div class="social-info">
-                                <h4>Email</h4>
-                                <p>Copy My Email</p>
-                            </div>
-                        </a>
+                <p class="caption">FCG-SNO iterations to reduce the mean relative residual by 10⁶. A dash means the threshold was not reached.</p>
+                <ul>
+                    <li><b>Reproduced:</b> classical baselines (within four iterations once the matrix scaling was corrected), the
+                        advantage of the Notay loss over L2, the advantage of Krylov residuals over random ones for training, and a
+                        per-step Notay ratio near 0.5.</li>
+                    <li><b>Not reproduced:</b> the headline iteration counts. The authors' unmodified code produces our numbers, not
+                        the published ones. At 128×128, the solver stalls on part of the test set.</li>
+                    <li><b>Timing reverses:</b> against a JIT-compiled CG baseline, each FCG-SNO iteration costs roughly 36× more
+                        (up to ~200× at the largest grid). FCG-SNO ends up slower overall despite needing fewer iterations.</li>
+                </ul>
 
-                        <a href="https://github.com/rk96official" target="_blank" class="social-link github-link">
-                            <div class="social-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </div>
-                            <div class="social-info">
-                                <h4>GitHub</h4>
-                                <p>View My GitHub Profile</p>
-                            </div>
-                        </a>
+                <h3>Diagnosis &amp; Proposed Fixes</h3>
+                <p>On stalled systems, the per-step Notay ratio crosses 1 between iterations 7 and 24. Past that point, the theorem
+                    no longer guarantees contraction. We identify two gaps between the theory and the training procedure:</p>
+                <ol>
+                    <li>The guarantee needs the preconditioner error below 1 at <em>every</em> step, but the loss controls only its
+                        <em>average</em>.</li>
+                    <li>The network is trained on CG residuals but applied to FCG residuals.</li>
+                </ol>
+                <p>We propose training on the solver's own residuals with a worst-case (CVaR) loss, a safety-net FCG variant that
+                    always keeps the plain residual direction, a coefficient-aware network input, reduced-precision inference, and
+                    a smoothing wrapper. Each proposal is paired with an experiment that could falsify it.</p>
 
-                        <a href="https://linkedin.com/in/rk96official" target="_blank" class="social-link linkedin-link">
-                            <div class="social-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </div>
-                            <div class="social-info">
-                                <h4>LinkedIn</h4>
-                                <p>View My LinkedIn Profile</p>
-                            </div>
-                        </a>
-
-                        <a href="https://www.researchgate.net/profile/Rupak-Kadel" target="_blank" class="social-link researchgate-link">
-                            <div class="social-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                </svg>
-                            </div>
-                            <div class="social-info">
-                                <h4>ResearchGate</h4>
-                                <p>View My ResearchGate Profile</p>
-                            </div>
-                        </a>
-
-                        <a href="https://scholar.google.com/citations?user=Psl7B20AAAAJ" target="_blank" class="social-link scholar-link">
-                            <div class="social-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
-                                </svg>
-                            </div>
-                            <div class="social-info">
-                                <h4>Google Scholar</h4>
-                                <p>View My Google Scholar Profile</p>
-                            </div>
-                        </a>
-                    </div>
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">JAX</span><span class="tag">Python</span><span class="tag">Neural Operators</span>
+                    <span class="tag">Krylov Methods</span><span class="tag">Sparse Linear Algebra</span><span class="tag">NVIDIA H100</span>
                 </div>
             </div>
         </section>
-    </div>
 
-    <!-- Detail Pages Container -->
-    <div id="detailPages" style="display: none;">
-        <!-- Experience Details -->
-        <div id="experience-gra" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
-                    <h1>Graduate Research Assistant at Texas Tech University</h1>
-                    <p>HPC observability, adaptive anomaly detection, and research infrastructure • Aug, 2025 - Present</p>
+        <section id="paper-solar-panel" class="page" data-nav="research">
+            <a class="back" href="#research">&larr; Research</a>
+            <header class="detail-head">
+                <h1>Efficient Geometry of Flexible Solar Panels Optimized for the Latitude of New York City</h1>
+                <p>LaGuardia Community College &middot; Oct 2017 – Aug 2018</p>
+            </header>
+            <div class="prose">
+                <h3>Research Overview</h3>
+                <p>This project optimized flexible solar panel geometry for New York City's latitude. It analyzed catenoid-shaped
+                    panels and measured their efficiency against traditional flat designs.</p>
+
+                <h3>Key Findings</h3>
+                <ul>
+                    <li>A 0.5% efficiency improvement over traditional flat panel designs</li>
+                    <li>Optimal geometry configurations for NYC's latitude (40.7°N)</li>
+                    <li>Analysis of the mathematical properties of catenoid-shaped panel surfaces</li>
+                    <li>Practical applications for urban solar energy deployment</li>
+                </ul>
+
+                <h3>Presentations</h3>
+                <ul>
+                    <li>&ldquo;The Geometry of Solar Panels Based on Its Efficiency,&rdquo; MAA MathFest, Denver, CO (August 2018)</li>
+                    <li>&ldquo;Efficient geometry of flexible solar panels optimized for the latitude of New York City,&rdquo; SPIE Nonimaging Optics XV, San Diego, CA (September 2018)</li>
+                </ul>
+
+                <h3>Publication</h3>
+                <p class="citation">Marciniak, M., Hassebo, Y., Enriquez-Torres, D., Prajapati, N., Kadel, R., &amp; Michalakis, E.
+                    (2018). Efficient geometry of flexible solar panels optimized for the latitude of New York City. Proc. SPIE 10758.
+                    <a href="https://doi.org/10.1117/12.2321978" target="_blank" rel="noopener">doi:10.1117/12.2321978</a></p>
+
+                <h3>Tools</h3>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">Mathematica</span><span class="tag">MATLAB</span>
+                    <span class="tag">Mathematical Modeling</span><span class="tag">Geometric Optimization</span>
                 </div>
             </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Role Overview</h3>
-                        <p>Conducting systems and machine learning research for production high-performance computing environments. My work spans multimodal telemetry collection, offline experimentation, live anomaly detection, drift-aware adaptation, and reliable web services for research computing operations.</p>
+        </section>
 
-                        <h3>Offline and Online HPC Anomaly Detection</h3>
-                        <p>Designed an end-to-end anomaly detection framework that combines hardware telemetry, Slurm workload context, power measurements, and physics-informed evidence to identify operational faults across CPU and GPU nodes.</p>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Build asynchronous data pipelines for iDRAC/Redfish, Slurm, rack PDU, and cooling telemetry, with PostgreSQL-backed storage and processing</li>
-                            <li>Develop a multi-stage detection pipeline using statistical screening, workload-aware analysis, physics-based residuals, and gradient-boosted fusion</li>
-                            <li>Deploy online scoring at a five-minute cadence with safeguards for telemetry delay, enabling continuous detection on live cluster data</li>
-                            <li>Measure detection quality, alert lead time, runtime, memory footprint, and scaling behavior to assess operational feasibility</li>
-                        </ul>
+        <section id="paper-earth-pressure" class="page" data-nav="research">
+            <a class="back" href="#research">&larr; Research</a>
+            <header class="detail-head">
+                <h1>Accurate Calculation of the Earth's Pressure Using Numerical Integration</h1>
+                <p>LaGuardia Community College &middot; December 2017</p>
+            </header>
+            <div class="prose">
+                <h3>Abstract</h3>
+                <p>This study calculated the pressure inside the Earth as a function of distance from the center using two Earth
+                    models. Comparing them shows why realistic density profiles matter in geophysical calculations.</p>
 
-                        <h3>Drift-Aware Model Adaptation</h3>
-                        <p>Researching how anomaly detectors can adapt to legitimate changes in workloads and system behavior without learning from undiagnosed faults or poisoned telemetry.</p>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Develop a structure-aware admission layer that evaluates incoming data before it is used for model updates</li>
-                            <li>Combine operational records, system topology, physical constraints, and detector evidence to admit, quarantine, reject, or flag adaptation data</li>
-                            <li>Study safe retraining strategies that reduce detector staleness while preserving sensitivity to persistent and emerging anomalies</li>
-                        </ul>
+                <h3>Key Findings</h3>
+                <ul>
+                    <li>A center pressure of about 364 GPa under the Preliminary Reference Earth Model (PREM)</li>
+                    <li>A uniform-density model underestimates the center pressure by a factor of 2 (172 GPa vs. 364 GPa)</li>
+                    <li>A rotational inertia of 8.02×10³⁷ kg·m², 20% lower than the uniform-density estimate</li>
+                    <li>Mass concentrated near the Earth's center significantly changes its rotational properties</li>
+                </ul>
 
-                        <h3>ACCESS</h3>
-                        <p>Contributing to the development and operation of a web service that receives, validates, processes, and responds to transactions exchanged through the ACCESS research computing ecosystem.</p>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Maintain API endpoints and transaction workflows for account, allocation, project, and user-management requests</li>
-                            <li>Implement validation, status tracking, success responses, and actionable failure handling for reliable transaction processing</li>
-                            <li>Investigate transaction histories and integration failures to support dependable communication between institutional systems</li>
-                        </ul>
+                <h3>Methodology</h3>
+                <ul>
+                    <li>Pressure equations derived from hydrostatic equilibrium in spherical coordinates</li>
+                    <li>Simpson's 1/3 rule applied to the PREM density profile</li>
+                    <li>Enclosed mass computed as a function of radius for accurate gravitational force</li>
+                    <li>Implemented in Python with SciPy</li>
+                </ul>
 
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Python</span>
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Slurm</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">HPC Monitoring</span>
-                        </div>
-                    </div>
+                <h3>Tools</h3>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">SciPy</span><span class="tag">Numerical Integration</span>
+                    <span class="tag">Scientific Computing</span><span class="tag">LaTeX</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="experience-salesforce" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
-                    <h1>Software Engineer at Salesforce</h1>
-                    <p>Scalable microservices for Salesforce Data Cloud • Jan, 2022 - Jan, 2025</p>
+        <!-- ================================================================
+             DETAIL PAGES · Experience
+             ================================================================ -->
+        <section id="experience-gra" class="page" data-nav="experience">
+            <a class="back" href="#experience">&larr; Experience</a>
+            <header class="detail-head">
+                <h1>Graduate Research Assistant</h1>
+                <p>Department of Computer Science, Texas Tech University &middot; Aug 2025 – Present</p>
+            </header>
+            <div class="prose">
+                <h3>Role Overview</h3>
+                <p>I currently work on the systems and machine learning research for production HPC environments, centered on the NSF-funded REPACSS
+                    cluster. The work spans multimodal telemetry collection, offline experimentation, live anomaly detection,
+                    drift-aware adaptation, and reliable web services for research computing operations.</p>
+
+                <h3>Research</h3>
+                <ul>
+                    <li><a href="#research-insight-hpc">INSIGHT-HPC</a>: a multi-plane anomaly detection architecture that combines
+                        hardware telemetry, Slurm workload context, power measurements, and physics-guided evidence (F1 0.862 on
+                        79 days of production telemetry).</li>
+                    <li>Drift-aware model adaptation: a structure-aware admission layer that decides which incoming data is safe to
+                        use for detector retraining.</li>
+                </ul>
+
+                <h3>Telemetry &amp; Online Detection Infrastructure</h3>
+                <ul>
+                    <li>Deploy online scoring at a five-minute cadence, with safeguards for telemetry delay, for continuous
+                        detection on live cluster data</li>
+                    <li>Measure detection quality, alert lead time, runtime, memory footprint, and scaling behavior to assess
+                        operational feasibility</li>
+                </ul>
+
+                <h3>ACCESS Transaction Services</h3>
+                <p>I help develop and operate a web service that receives, validates, processes, and responds to transactions in
+                    the ACCESS research computing ecosystem.</p>
+                <ul>
+                    <li>Maintain API endpoints and transaction workflows for account, allocation, project, and user-management requests</li>
+                    <li>Implement validation, status tracking, success responses, and actionable failure handling</li>
+                </ul>
+
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Slurm</span>
+                    <span class="tag">PostgreSQL</span><span class="tag">Redfish</span><span class="tag">REST APIs</span>
                 </div>
             </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Role Overview</h3>
-                        <p>As an MTS/AMTS Software Engineer at Salesforce, I engineered scalable microservices within Salesforce Genie for Data Cloud, focusing on infrastructure provisioning, management, and optimization for Spark workloads in Amazon EMR and Kubernetes environments.</p>
+        </section>
 
-                        <h3>Key Responsibilities</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Designed pivotal microservices for provisioning and managing Amazon EMR and Kubernetes infrastructure</li>
-                            <li>Implemented Redis Lua-based adaptive throttling with token-based rate limiting for Spark workloads</li>
-                            <li>Led migration of EKS Clusters to Launch Templates for enhanced flexibility and integration</li>
-                            <li>Launched Karpenter in EKS Clusters with weekly node patching for improved reliability</li>
-                            <li>Provided on-call support to hundreds of customers, resolving critical issues swiftly</li>
-                        </ul>
+        <section id="experience-salesforce" class="page" data-nav="experience">
+            <a class="back" href="#experience">&larr; Experience</a>
+            <header class="detail-head">
+                <h1>Software Engineer at Salesforce</h1>
+                <p>Jan 2022 – Jan 2025</p>
+            </header>
+            <div class="prose">
+                <h3>Role Overview</h3>
+                <p>As an AMTS and then MTS Software Engineer, I built scalable microservices in Salesforce Genie for Data Cloud.
+                    I worked on provisioning, managing, and optimizing infrastructure for Spark workloads on Amazon EMR and
+                    Kubernetes.</p>
 
-                        <h3>Major Achievements</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Achieved over 30% infrastructure cost savings through Karpenter implementation and cluster optimization</li>
-                            <li>Reduced operational costs by 25% through strategic cluster provisioning and algorithm optimizations</li>
-                            <li>Improved customer satisfaction by 20% through rapid issue resolution and feature delivery</li>
-                            <li>Achieved 90%+ code coverage through comprehensive test strategies and automation frameworks</li>
-                            <li>Enhanced system stability by preventing overloads through adaptive throttling mechanisms</li>
-                        </ul>
+                <h3>Key Responsibilities</h3>
+                <ul>
+                    <li>Designed core microservices for provisioning and managing Amazon EMR and Kubernetes infrastructure</li>
+                    <li>Implemented Redis Lua-based adaptive throttling with token-based rate limiting for Spark workloads</li>
+                    <li>Led the migration of EKS clusters to Launch Templates</li>
+                    <li>Launched Karpenter in EKS clusters with weekly node patching</li>
+                    <li>Provided on-call support to hundreds of customers</li>
+                </ul>
 
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Java</span>
-                            <span class="tag">Go</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">Terraform</span>
-                            <span class="tag">Spark</span>
-                            <span class="tag">Redis</span>
-                        </div>
-                    </div>
+                <h3>Major Achievements</h3>
+                <ul>
+                    <li>Saved more than 30% on infrastructure costs through Karpenter and cluster optimization</li>
+                    <li>Cut operational costs by 25% through better cluster provisioning and algorithm optimizations</li>
+                    <li>Raised customer satisfaction by 20% through rapid issue resolution and feature delivery</li>
+                    <li>Reached 90%+ code coverage with comprehensive testing and automation</li>
+                </ul>
+
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">Java</span><span class="tag">Go</span><span class="tag">SQL</span><span class="tag">Kubernetes</span>
+                    <span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">Terraform</span>
+                    <span class="tag">Spark</span><span class="tag">Redis</span><span class="tag">gRPC</span><span class="tag">Jenkins</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="experience-ttu" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
-                    <h1>IT Student Assistant at Texas Tech University</h1>
-                    <p>Technical support and knowledge management • Oct, 2019 - Dec, 2021</p>
+        <section id="experience-paycom" class="page" data-nav="experience">
+            <a class="back" href="#experience">&larr; Experience</a>
+            <header class="detail-head">
+                <h1>Software Developer Intern at Paycom</h1>
+                <p>May 2021 – Aug 2021</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>I worked with Paycom's development team to build an internal social media application that encouraged employee
+                    engagement and increased Paycom app usage.</p>
+
+                <h3>Key Achievements</h3>
+                <ul>
+                    <li>Built an internal social media application that increased Paycom app usage by 50%</li>
+                    <li>Created reusable React UI components, cutting development time by 30%</li>
+                    <li>Integrated REST services and cached data in the Redux store, reducing API calls by 40%</li>
+                    <li>Implemented Socket.io for real-time, event-based client–server communication</li>
+                </ul>
+
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">React.js</span><span class="tag">Redux</span><span class="tag">Socket.io</span>
+                    <span class="tag">REST APIs</span><span class="tag">JavaScript</span><span class="tag">Postman</span>
                 </div>
             </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Role Overview</h3>
-                        <p>Provided comprehensive IT support at Texas Tech University's IT Help Central, delivering technical assistance to students, faculty, and staff while managing knowledge base solutions and supervising student assistants.</p>
+        </section>
 
-                        <h3>Key Responsibilities</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Diagnosed and troubleshot 5-8 IT-related issues per hour via phone and in-person support</li>
-                            <li>Provided technical support for hardware, software, network troubleshooting, and account management</li>
-                            <li>Supervised student assistants in developing and reviewing knowledge base solutions</li>
-                            <li>Maintained detailed documentation of recurring technical issues and solutions</li>
-                            <li>Collaborated with IT teams to escalate complex technical problems</li>
-                        </ul>
+        <section id="experience-ilsnyc2" class="page" data-nav="experience">
+            <a class="back" href="#experience">&larr; Experience</a>
+            <header class="detail-head">
+                <h1>Information Technology Intern at Innovative Lab Solutions</h1>
+                <p>Jun 2019 – Aug 2019</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>I improved application performance, built automated tests, and set up CI/CD pipelines to speed up development
+                    and deployment.</p>
 
-                        <h3>Major Achievements</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Improved customer satisfaction and efficiency by 20% through enhanced support processes</li>
-                            <li>Increased knowledge base utilization by both customers and support agents by 20%</li>
-                            <li>Maintained high-volume support delivery while ensuring quality resolution of technical issues</li>
-                            <li>Developed streamlined troubleshooting procedures adopted by the support team</li>
-                        </ul>
+                <h3>Key Achievements</h3>
+                <ul>
+                    <li>Found and fixed memory leaks in web applications, significantly reducing memory usage</li>
+                    <li>Wrote JUnit test suites that reached 90% code coverage</li>
+                    <li>Automated CI/CD with GitHub Actions, speeding up the release cycle by 50%</li>
+                </ul>
 
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Technical Support</span>
-                            <span class="tag">Hardware Troubleshooting</span>
-                            <span class="tag">Network Diagnostics</span>
-                            <span class="tag">Windows & macOS</span>
-                            <span class="tag">Active Directory</span>
-                            <span class="tag">Knowledge Management</span>
-                        </div>
-                    </div>
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">Java</span><span class="tag">JUnit</span><span class="tag">GitHub Actions</span>
+                    <span class="tag">Memory Profiling</span><span class="tag">CI/CD</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="experience-paycom" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
-                    <h1>Software Developer Intern at Paycom</h1>
-                    <p>Internal social media platform development • May, 2021 - Aug, 2021</p>
+        <section id="experience-ttu" class="page" data-nav="experience">
+            <a class="back" href="#experience">&larr; Experience</a>
+            <header class="detail-head">
+                <h1>IT Student Assistant at Texas Tech University</h1>
+                <p>Oct 2019 – Dec 2021</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>I provided technical support to students, faculty, and staff, maintained knowledge-base solutions, and
+                    supervised other student assistants.</p>
+
+                <h3>Highlights</h3>
+                <ul>
+                    <li>Diagnosed and resolved 5–8 IT issues per hour by phone and in person</li>
+                    <li>Supported hardware, software, network troubleshooting, and account management</li>
+                    <li>Supervised student assistants in writing and reviewing knowledge-base solutions</li>
+                    <li>Raised customer satisfaction and efficiency by 20%, and knowledge-base usage by 20%</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience-ilsnyc1" class="page" data-nav="experience">
+            <a class="back" href="#experience">&larr; Experience</a>
+            <header class="detail-head">
+                <h1>Administrative Assistant at Innovative Lab Solutions</h1>
+                <p>Feb 2018 – Aug 2018</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>I supported daily office operations, using the Microsoft Office suite for document preparation, data entry, and
+                    workflow organization.</p>
+                <ul>
+                    <li>Managed accurate data entry and document preparation</li>
+                    <li>Organized office workflows more efficiently</li>
+                    <li>Supported team coordination and communication</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience-nycha" class="page" data-nav="experience">
+            <a class="back" href="#experience">&larr; Experience</a>
+            <header class="detail-head">
+                <h1>Student Customer Service Representative at NYCHA</h1>
+                <p>Jun 2017 – Dec 2017</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>I handled resident inquiries and coordinated emergency responses for public housing communities in a
+                    high-volume call center.</p>
+                <ul>
+                    <li>Handled 18+ incoming calls per hour</li>
+                    <li>Dispatched appropriate services for emergency calls</li>
+                    <li>Coordinated with other departments to resolve resident concerns</li>
+                    <li>Kept detailed call logs and incident reports for follow-up</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             DETAIL PAGES · Projects
+             ================================================================ -->
+        <section id="project-agent" class="page" data-nav="projects">
+            <a class="back" href="#projects">&larr; Projects</a>
+            <header class="detail-head">
+                <h1>Self-Learning Conversational Agent</h1>
+                <p>Reinforcement learning chatbot built with RASA &middot; Jun 2021 – Dec 2021</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>I built a reinforcement learning conversational agent in the RASA framework. It uses Q-learning to improve its
+                    responses from user feedback and reached over 80% accuracy through reward engineering.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Deep Q-Network (DQN) architecture with an experience replay buffer</li>
+                    <li>Rewards based on natural-language-understanding (NLU) confidence</li>
+                    <li>User feedback built into continuous learning</li>
+                    <li>20%+ accuracy improvement from reinforcement learning training</li>
+                </ul>
+
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">RASA</span><span class="tag">Python</span><span class="tag">Reinforcement Learning</span>
+                    <span class="tag">DQN</span><span class="tag">NLP</span>
                 </div>
             </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Internship Overview</h3>
-                        <p>Collaborated with the development team at Paycom to create an internal social media application designed to enhance employee engagement and increase Paycom app usage across the organization.</p>
+        </section>
 
-                        <h3>Key Projects & Achievements</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Developed a comprehensive internal social media application that increased Paycom app usage by 50%</li>
-                            <li>Created reusable UI components using React, reducing development time by 30% with improved code coverage</li>
-                            <li>Integrated REST API services and implemented caching with Redux store for efficient data management</li>
-                            <li>Reduced API calls by 40% through strategic caching implementation</li>
-                            <li>Implemented Socket.io for real-time event-based communication between client and server</li>
-                        </ul>
+        <section id="project-resq" class="page" data-nav="projects">
+            <a class="back" href="#projects">&larr; Projects</a>
+            <header class="detail-head">
+                <h1>ResQ: Emergency Response Mobile App</h1>
+                <p>Cross-platform disaster response application &middot; 2020</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>ResQ is a cross-platform mobile app that uses location-based services to connect disaster victims with nearby
+                    emergency responders and volunteers.</p>
 
-                        <h3>Technical Implementation</h3>
-                        <p>Built a modern React-based application with real-time communication capabilities, focusing on user experience and performance optimization. The project involved full-stack development with emphasis on creating scalable and maintainable code architecture.</p>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Real-time, location-based matching of victims with nearby responders</li>
+                    <li>Runs on both iOS and Android</li>
+                    <li>Emergency alerts with push notifications</li>
+                    <li>Built-in maps and navigation for coordinating responders</li>
+                    <li>Secure authentication and profile management</li>
+                </ul>
 
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">React.js</span>
-                            <span class="tag">Redux</span>
-                            <span class="tag">Socket.io</span>
-                            <span class="tag">REST APIs</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Postman</span>
-                        </div>
-                    </div>
+                <h3>Architecture</h3>
+                <p>The app is built with React Native and React Navigation. Firebase handles real-time data sync, and Google Cloud
+                    Platform provides scalable infrastructure.</p>
+
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">React Native</span><span class="tag">React Navigation</span><span class="tag">Firebase</span>
+                    <span class="tag">Google Cloud Platform</span><span class="tag">Location Services</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="experience-ilsnyc2" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
-                    <h1>Information Technology Intern at Innovative Lab Solutions</h1>
-                    <p>Performance optimization and CI/CD automation • Jun, 2019 - Aug, 2019</p>
+        <section id="project-foodweb" class="page" data-nav="projects">
+            <a class="back" href="#projects">&larr; Projects</a>
+            <header class="detail-head">
+                <h1>Foodweb: Restaurant Discovery Platform</h1>
+                <p>MVC web application with multiple APIs &middot; Oct 2019 – Dec 2019</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>As part of a team, I built a restaurant discovery web app using the Model-View-Controller pattern. It combines
+                    real-time data from several APIs to show top restaurants in any area.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Google Maps API for location and mapping</li>
+                    <li>Zomato API for restaurant data and reviews</li>
+                    <li>Weather API for dining-relevant conditions</li>
+                    <li>Clean MVC architecture for maintainability</li>
+                </ul>
+
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">MVC</span>
+                    <span class="tag">Google Maps API</span><span class="tag">REST APIs</span>
                 </div>
             </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Internship Overview</h3>
-                        <p>Focused on improving application performance, implementing automated testing frameworks, and establishing CI/CD pipelines to accelerate software development and deployment processes.</p>
+        </section>
 
-                        <h3>Key Achievements</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Identified and resolved memory leaks in web applications, significantly improving memory usage efficiency</li>
-                            <li>Developed comprehensive JUnit test cases achieving 90% code coverage</li>
-                            <li>Implemented GitHub Actions for CI/CD automation, accelerating software release cycle by 50%</li>
-                            <li>Enhanced application performance through systematic optimization techniques</li>
-                            <li>Contributed to quality assurance processes through automated testing implementation</li>
-                        </ul>
+        <section id="project-stock" class="page" data-nav="projects">
+            <a class="back" href="#projects">&larr; Projects</a>
+            <header class="detail-head">
+                <h1>Extended Level Boomers: Algorithmic Trading</h1>
+                <p>Stock and ETF trading algorithm &middot; Oct 2018 – Nov 2018</p>
+            </header>
+            <div class="prose">
+                <h3>Overview</h3>
+                <p>I designed and implemented an algorithmic trading system in Java and SQL. It reached a 90% win rate on both
+                    short- and long-term stock and ETF positions.</p>
 
-                        <h3>Technical Skills Developed</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Memory profiling and performance optimization techniques</li>
-                            <li>Unit testing with JUnit framework</li>
-                            <li>CI/CD pipeline setup and configuration</li>
-                            <li>Code quality analysis and improvement strategies</li>
-                        </ul>
+                <h3>Features</h3>
+                <ul>
+                    <li>Market data processing and analysis</li>
+                    <li>Trading strategies across multiple timeframes</li>
+                    <li>Risk management and position sizing</li>
+                    <li>Historical backtesting and performance reporting</li>
+                </ul>
 
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Java</span>
-                            <span class="tag">JUnit</span>
-                            <span class="tag">GitHub Actions</span>
-                            <span class="tag">Performance Testing</span>
-                            <span class="tag">Memory Profiling</span>
-                            <span class="tag">CI/CD</span>
-                        </div>
-                    </div>
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Data Structures &amp; Algorithms</span>
+                    <span class="tag">Financial Modeling</span>
                 </div>
             </div>
-        </div>
+        </section>
+    </main>
 
-        <div id="experience-ilsnyc1" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
-                    <h1>Administrative Assistant at Innovative Lab Solutions</h1>
-                    <p>Office operations and document management • Feb, 2018 - Aug, 2018</p>
-                </div>
-            </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Role Overview</h3>
-                        <p>Provided comprehensive administrative support for Innovative Lab Solutions, utilizing advanced proficiency in Microsoft Office Suite to streamline office operations and ensure accurate document management.</p>
+    <footer class="site-footer">
+        &copy; <span id="year">2026</span> Rupak Kadel &middot; Texas Tech University
+    </footer>
 
-                        <h3>Key Responsibilities</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Utilized advanced MS Office Suite capabilities to support daily office operations</li>
-                            <li>Managed precise data entry and document preparation tasks</li>
-                            <li>Streamlined office processes through efficient workflow organization</li>
-                            <li>Maintained high standards of accuracy in all administrative tasks</li>
-                            <li>Supported team coordination and communication activities</li>
-                        </ul>
-
-                        <h3>Skills Developed</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Advanced proficiency in Microsoft Office Suite (Word, Excel, PowerPoint, Outlook)</li>
-                            <li>Strong attention to detail in document management and data entry</li>
-                            <li>Efficient workflow optimization and process improvement</li>
-                            <li>Professional communication and organizational skills</li>
-                        </ul>
-
-                        <h3>Core Competencies</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Microsoft Office Suite</span>
-                            <span class="tag">Data Entry</span>
-                            <span class="tag">Document Management</span>
-                            <span class="tag">Administrative Support</span>
-                            <span class="tag">Process Optimization</span>
-                            <span class="tag">Attention to Detail</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="experience-nycha" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('experience')">← Back to Experience</button>
-                    <h1>Student Customer Service Representative at NYCHA</h1>
-                    <p>High-volume customer service and emergency response • Jun, 2017 - Dec, 2017</p>
-                </div>
-            </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Role Overview</h3>
-                        <p>Provided exceptional customer service in a fast-paced, high-volume call center environment at the New York City Housing Authority, handling resident inquiries and coordinating emergency responses for public housing communities.</p>
-
-                        <h3>Key Responsibilities</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Managed an average of 18+ incoming calls per hour while maintaining professionalism</li>
-                            <li>Provided comprehensive customer service for NYC Housing Authority residents</li>
-                            <li>Handled emergency calls and dispatched appropriate services for timely response</li>
-                            <li>Coordinated with various departments to resolve resident concerns efficiently</li>
-                            <li>Maintained detailed call logs and incident reports for follow-up actions</li>
-                        </ul>
-
-                        <h3>Skills Developed</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>High-pressure customer service in fast-paced environment</li>
-                            <li>Emergency response coordination and crisis management</li>
-                            <li>Multi-tasking and time management under pressure</li>
-                            <li>Clear communication with diverse populations</li>
-                            <li>Problem-solving and conflict resolution skills</li>
-                        </ul>
-
-                        <h3>Key Competencies</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Customer Service</span>
-                            <span class="tag">Call Center Operations</span>
-                            <span class="tag">Emergency Response</span>
-                            <span class="tag">Communication Skills</span>
-                            <span class="tag">Problem Solving</span>
-                            <span class="tag">Crisis Management</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Project Details -->
-        <div id="project-agent" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('projects')">← Back to Projects</button>
-                    <h1>Self-Learning Conversational Agent</h1>
-                    <p>Reinforcement learning-powered chatbot using RASA • Jun 2021 - Dec 2021</p>
-                </div>
-            </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Project Overview</h3>
-                        <p>Developed a sophisticated reinforcement learning-based conversational agent using the RASA framework. The project involved implementing Q-learning algorithms that enable the chatbot to improve its responses based on user feedback, achieving over 80% accuracy through advanced reward engineering.</p>
-
-                        <h3>Key Features</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Self-learning capabilities through Q-learning algorithm implementation</li>
-                            <li>User feedback integration for continuous improvement</li>
-                            <li>Deep Q-Network (DQN) architecture with experience replay buffer</li>
-                            <li>Natural language understanding confidence-based reward system</li>
-                            <li>Over 20% accuracy improvement through reinforcement learning training</li>
-                        </ul>
-
-                        <h3>Technical Implementation</h3>
-                        <p>The system utilizes a sophisticated reward engineering approach based on natural language understanding confidence levels. The Deep Q-Network architecture with experience replay enables the agent to learn from past interactions and continuously improve its conversational abilities.</p>
-
-                        <h3>Research Contributions</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Conducted rigorous research on self-learning chatbot development</li>
-                            <li>Developed novel reward engineering strategies for conversational AI</li>
-                            <li>Achieved 80%+ accuracy through effective reinforcement learning implementation</li>
-                            <li>Integrated experience replay buffer for enhanced learning capabilities</li>
-                        </ul>
-
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">RASA</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Reinforcement Learning</span>
-                            <span class="tag">Deep Q-Networks (DQN)</span>
-                            <span class="tag">Natural Language Processing</span>
-                            <span class="tag">Q-Learning</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="project-resq" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('projects')">← Back to Projects</button>
-                    <h1>ResQ - Emergency Response Mobile App</h1>
-                    <p>Cross-platform disaster response application • 2020</p>
-                </div>
-            </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Project Overview</h3>
-                        <p>Developed ResQ, a cross-platform mobile application designed to connect disaster victims with nearby emergency responders and volunteers. The app leverages location-based services to facilitate rapid emergency response coordination during natural disasters and crisis situations.</p>
-
-                        <h3>Key Features</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Real-time location-based matching of victims with nearby responders</li>
-                            <li>Cross-platform compatibility for iOS and Android devices</li>
-                            <li>Emergency alert system with push notifications</li>
-                            <li>Integrated mapping and navigation for responder coordination</li>
-                            <li>Secure user authentication and profile management</li>
-                        </ul>
-
-                        <h3>Technical Architecture</h3>
-                        <p>Built using React Native for cross-platform development, with Firebase backend services providing real-time data synchronization and Google Cloud Platform services for scalable infrastructure. The application utilizes React Navigation for seamless user experience across different screens and functionalities.</p>
-
-                        <h3>Impact & Use Cases</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Enables rapid response coordination during natural disasters</li>
-                            <li>Reduces emergency response time through efficient victim-responder matching</li>
-                            <li>Provides offline capabilities for areas with limited connectivity</li>
-                            <li>Supports various emergency scenarios including floods, earthquakes, and storms</li>
-                        </ul>
-
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">React Native</span>
-                            <span class="tag">React Navigation</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Google Cloud Platform</span>
-                            <span class="tag">Location Services</span>
-                            <span class="tag">Push Notifications</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="project-foodweb" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('projects')">← Back to Projects</button>
-                    <h1>Foodweb - Restaurant Discovery Platform</h1>
-                    <p>Web application using MVC architecture and multiple APIs • Oct 2019 - Dec 2019</p>
-                </div>
-            </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Project Overview</h3>
-                        <p>Collaborated with a team to develop a comprehensive restaurant discovery web application using the MVC design pattern. The platform provides users with detailed information about top restaurants in any area, incorporating real-time data from multiple APIs to deliver comprehensive dining insights.</p>
-
-                        <h3>Key Features</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Restaurant discovery based on location and user reviews</li>
-                            <li>Integration with Google Maps API for location services and mapping</li>
-                            <li>Zomato API integration for comprehensive restaurant data and reviews</li>
-                            <li>Weather API integration to provide dining-relevant weather information</li>
-                            <li>Clean MVC architecture for maintainable and scalable code</li>
-                        </ul>
-
-                        <h3>Technical Implementation</h3>
-                        <p>The application follows the Model-View-Controller design pattern, ensuring separation of concerns and code maintainability. Multiple API integrations provide users with real-time restaurant information, reviews, location data, and weather conditions that might affect their dining experience.</p>
-
-                        <h3>Team Collaboration</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Worked in an Agile development environment with regular sprint cycles</li>
-                            <li>Implemented version control best practices using Git</li>
-                            <li>Participated in code reviews and pair programming sessions</li>
-                            <li>Contributed to both frontend user interface and backend API integration</li>
-                        </ul>
-
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MVC Architecture</span>
-                            <span class="tag">Google Maps API</span>
-                            <span class="tag">Zomato API</span>
-                            <span class="tag">Weather API</span>
-                            <span class="tag">REST APIs</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="project-stock" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('projects')">← Back to Projects</button>
-                    <h1>Extended Level Boomers - Algorithmic Trading</h1>
-                    <p>High-performance stock and ETF trading algorithm • Oct 2018 - Nov 2018</p>
-                </div>
-            </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Project Overview</h3>
-                        <p>Designed and implemented a sophisticated algorithmic trading system in Java and SQL that achieved exceptional performance in both short-term and long-term stock and ETF trading positions. The algorithm demonstrated a remarkable 90% winning rate across various market conditions.</p>
-
-                        <h3>Key Achievements</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Achieved 90% winning rate for both short-term and long-term positions</li>
-                            <li>Developed comprehensive trading algorithms for stocks and ETFs</li>
-                            <li>Implemented robust data analysis and financial modeling techniques</li>
-                            <li>Created efficient data structures for real-time market data processing</li>
-                            <li>Designed risk management protocols to minimize potential losses</li>
-                        </ul>
-
-                        <h3>Technical Implementation</h3>
-                        <p>The trading system was built using Java for core algorithm development and SQL for efficient data management and historical analysis. The implementation focused on optimized data structures and algorithms to ensure rapid decision-making in volatile market conditions.</p>
-
-                        <h3>Features</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Real-time market data processing and analysis</li>
-                            <li>Multi-timeframe trading strategy implementation</li>
-                            <li>Advanced risk management and position sizing</li>
-                            <li>Historical backtesting capabilities</li>
-                            <li>Performance analytics and reporting</li>
-                        </ul>
-
-                        <h3>Technologies Used</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Java</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Data Structures & Algorithms</span>
-                            <span class="tag">Financial Modeling</span>
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Risk Management</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Paper Details -->
-        <div id="paper-solar-panel" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('research')">← Back to Research</button>
-                    <h1>Efficient geometry of flexible solar panels optimized for the latitude of New York City</h1>
-                    <p>LaGuardia Community College • Oct 2017 - Aug 2018</p>
-                </div>
-            </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Research Overview</h3>
-                        <p>Conducted comprehensive research on optimizing flexible solar panel geometry specifically for New York City's latitude. The study focused on analyzing catenoid-shaped solar panels and their efficiency improvements over traditional flat panel designs.</p>
-
-                        <h3>Key Findings</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Achieved 0.5% efficiency improvement over traditional flat panel designs</li>
-                            <li>Demonstrated optimal geometry configurations for NYC's specific latitude (40.7°N)</li>
-                            <li>Analyzed the mathematical properties of catenoid-shaped solar panel surfaces</li>
-                            <li>Provided practical applications for urban solar energy deployment</li>
-                        </ul>
-
-                        <h3>Research Impact</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Led conference presentations to diverse audiences at MAA MathFest and SPIE conferences</li>
-                            <li>Resulted in 20% increase in student engagement in renewable energy research</li>
-                            <li>Contributed to understanding of geometric optimization in solar energy applications</li>
-                            <li>Published findings in SPIE Proceedings for broader scientific community access</li>
-                        </ul>
-
-                        <h3>Conference Presentations</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>"The Geometry of Solar Panels based on its Efficiency" - MAA MathFest, Denver, CO (August 2018)</li>
-                            <li>"Efficient geometry of flexible solar panels optimized for the latitude of New York City" - SPIE Nonimaging Optics XV, San Diego, CA (September 2018)</li>
-                        </ul>
-
-                        <h3>Research Tools</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Python</span>
-                            <span class="tag">Mathematica</span>
-                            <span class="tag">MATLAB</span>
-                            <span class="tag">Mathematical Modeling</span>
-                            <span class="tag">Solar Energy Analysis</span>
-                            <span class="tag">Geometric Optimization</span>
-                        </div>
-
-                        <h3>Publication</h3>
-                        <p style="font-style: italic; margin: 1rem 0;">Marciniak, M., Hassebo, Y., Enriquez-Torres, D., Prajapati, N., Kadel, R., & Michalakis, E. (2018). Efficient geometry of flexible solar panels optimized for the latitude of New York City. SPIE Proceedings, 10759. doi:10.1117/12.2321978</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="paper-earth-pressure" class="page detail-page">
-            <div class="detail-header">
-                <div class="container">
-                    <button class="back-btn" onclick="showPage('research')">← Back to Research</button>
-                    <h1>Accurate calculation of the Earth Pressure using numerical integration</h1>
-                    <p>LaGuardia Community College • December 2017</p>
-                </div>
-            </div>
-            <div class="detail-content">
-                <div class="container">
-                    <div style="max-width: 800px; margin: 0 auto;">
-                        <h3>Research Abstract</h3>
-                        <p>This research calculated the pressure inside the Earth as a function of distance from the center, utilizing two different Earth models to demonstrate the importance of realistic density profiles in geophysical calculations. The study achieved accurate pressure calculations through advanced numerical integration techniques.</p>
-
-                        <h3>Key Findings</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Calculated Earth's center pressure at approximately 364 GPa using the Preliminary Reference Earth Model (PREM)</li>
-                            <li>Demonstrated that uniform density models underestimate center pressure by a factor of 2 (172 GPa vs 364 GPa)</li>
-                            <li>Computed Earth's rotational inertia as 8.02×10³⁷ kg·m², showing 20% reduction from naive uniform distribution calculations</li>
-                            <li>Validated the critical importance of realistic density profiles for accurate geophysical modeling</li>
-                            <li>Showed that mass concentration at Earth's center significantly affects rotational properties</li>
-                        </ul>
-
-                        <h3>Methodology</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Implemented Simpson's 1/3 rule for numerical integration of complex density functions</li>
-                            <li>Applied the Preliminary Reference Earth Model (PREM) for realistic density distribution</li>
-                            <li>Compared results between uniform density and realistic density models</li>
-                            <li>Used Python with SciPy for mathematical computations and numerical analysis</li>
-                            <li>Integrated pressure equations from Earth's surface to center using variable density profiles</li>
-                            <li>Calculated mass enclosed as a function of radial distance for accurate force calculations</li>
-                        </ul>
-
-                        <h3>Mathematical Framework</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Derived pressure equations from hydrostatic equilibrium principles</li>
-                            <li>Used gravitational force balance with pressure gradient forces</li>
-                            <li>Applied spherical coordinate system for Earth's layered structure</li>
-                            <li>Implemented numerical integration with appropriate step sizes for accuracy</li>
-                        </ul>
-
-                        <h3>Scientific Contributions</h3>
-                        <ul style="margin: 1rem 0; padding-left: 2rem;">
-                            <li>Demonstrated practical application of numerical integration in geophysics</li>
-                            <li>Provided educational framework for understanding Earth's internal structure</li>
-                            <li>Showed quantitative impact of density variations on pressure calculations</li>
-                            <li>Created computational model for Earth's internal pressure distribution</li>
-                        </ul>
-
-                        <h3>Technical Tools & Methods</h3>
-                        <div class="tags" style="margin: 1rem 0;">
-                            <span class="tag">Python</span>
-                            <span class="tag">SciPy</span>
-                            <span class="tag">Numerical Integration</span>
-                            <span class="tag">Scientific Computing</span>
-                            <span class="tag">Geophysical Modeling</span>
-                            <span class="tag">LaTeX</span>
-                        </div>
-
-                        <h3>Research Impact</h3>
-                        <p>This work demonstrated the critical importance of using realistic Earth models in geophysical calculations and provided a computational framework that could be applied to other planetary bodies. The study showed how advanced numerical methods can provide accurate solutions to complex geophysical problems.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="main.js"></script>
 </body>
 </html>
