@@ -395,6 +395,12 @@
             <h1 class="page-title">Projects</h1>
 
             <div class="card-grid">
+                <a class="card" href="#project-detectiq">
+                    <p class="card-kicker">NLP &middot; 2026</p>
+                    <h3>DetectIQ: AI vs. Human Text Detection</h3>
+                    <p>Compares classical, neural, and stylometric detectors of AI-generated text, with LLM-generated explanations of each prediction.</p>
+                    <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Hugging Face</span></div>
+                </a>
                 <a class="card" href="#project-agent">
                     <p class="card-kicker">Reinforcement Learning &middot; 2021</p>
                     <h3>Self-Learning Conversational Agent</h3>
@@ -935,6 +941,37 @@
         <!-- ================================================================
              DETAIL PAGES · Projects
              ================================================================ -->
+        <section id="project-detectiq" class="page" data-nav="projects">
+            <a class="back" href="#projects">&larr; Projects</a>
+            <header class="detail-head">
+                <h1>DetectIQ: AI vs. Human Text Detection</h1>
+                <p>Detecting AI-generated text with explainable predictions &middot; Jun 2026 – Jul 2026</p>
+            </header>
+            <div class="prose">
+                <p><a href="https://huggingface.co/spaces/thelege9d/DetectIQ" target="_blank" rel="noopener">Live demo on Hugging Face Spaces &rarr;</a></p>
+
+                <h3>Overview</h3>
+                <p>DetectIQ classifies text as AI-generated or human-written. It compares classical, neural, and stylometric
+                    approaches, then uses large language models to explain each prediction in plain language.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>A preprocessing pipeline with POS-aware lemmatization</li>
+                    <li>Three feature representations: TF-IDF, GloVe embeddings, and 15 stylometric signals</li>
+                    <li>Evaluation across SVM, Decision Tree, AdaBoost, FNN, LSTM, and TextCNN models</li>
+                    <li>Natural-language explanations of model predictions from two Hugging Face LLMs (Qwen2.5 and TinyLlama)</li>
+                    <li>An interactive Streamlit app deployed on Hugging Face Spaces</li>
+                </ul>
+
+                <h3>Technologies</h3>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Hugging Face</span>
+                    <span class="tag">scikit-learn</span><span class="tag">TF-IDF</span><span class="tag">GloVe</span>
+                    <span class="tag">LSTM</span><span class="tag">TextCNN</span><span class="tag">Qwen2.5</span><span class="tag">TinyLlama</span>
+                </div>
+            </div>
+        </section>
+
         <section id="project-agent" class="page" data-nav="projects">
             <a class="back" href="#projects">&larr; Projects</a>
             <header class="detail-head">
